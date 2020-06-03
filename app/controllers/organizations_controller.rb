@@ -1,51 +1,44 @@
 class OrganizationsController < ApplicationController
-  before_action :set_organization, only: [:show, :update, :destroy]
+  before_action :set_org, only: [:show, :update, :destroy]
 
-  # GET /organizations
   def index
-    @organizations = Organization.all
+    @orgs = Organization.all
 
-    render json: @organizations
+    render json: @orgs
   end
 
-  # GET /organizations/1
   def show
-    render json: @organization
+    render json: @org
   end
 
-  # POST /organizations
   def create
-    @organization = Organization.new(organization_params)
+    @org = Organization.new(org_params)
 
-    if @organization.save
-      render json: @organization, status: :created, location: @organization
+    if @org.save
+      render json: @org, status: :created, location: @org
     else
-      render json: @organization.errors, status: :unprocessable_entity
+      render json: @org.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /organizations/1
   def update
-    if @organization.update(organization_params)
-      render json: @organization
+    if @org.update(org_params)
+      render json: @org
     else
-      render json: @organization.errors, status: :unprocessable_entity
+      render json: @org.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /organizations/1
   def destroy
-    @organization.destroy
+    @org.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_organization
-      @organization = Organization.find(params[:id])
+    def set_org
+      @org = Organization.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
-    def organization_params
+    def org_params
       params.require(:organization).permit(:name, :location, :website, :donation_link, :description)
     end
 end
