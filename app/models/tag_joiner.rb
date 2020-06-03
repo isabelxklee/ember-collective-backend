@@ -1,0 +1,2 @@
+class TagJoiner < ApplicationRecord
+end

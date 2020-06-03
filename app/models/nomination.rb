@@ -1,0 +1,2 @@
+class Nomination < ApplicationRecord
+end
