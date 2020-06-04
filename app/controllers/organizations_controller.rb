@@ -12,9 +12,9 @@ class OrganizationsController < ApplicationController
   end
 
   def create
-    @org = Organization.new(org_params)
+    @org = Organization.create(org_params())
 
-    if @org.save
+    if @org.valid?
       render json: @org, status: :created, location: @org
     else
       render json: @org.errors, status: :unprocessable_entity
@@ -39,6 +39,6 @@ class OrganizationsController < ApplicationController
     end
 
     def org_params
-      params.require(:organization).permit(:name, :location, :website, :donation_link, :description)
+      params.permit(:name, :location, :website, :donation_link, :description)
     end
 end
