@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 2020_06_03_221309) do
     t.string "username"
     t.string "email_address"
     t.string "password_digest"
-    t.datetime "join_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
