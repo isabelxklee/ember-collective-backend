@@ -1,5 +1,6 @@
 class OrganizationsController < ApplicationController
   before_action :set_org, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
   def index
     @orgs = Organization.all
