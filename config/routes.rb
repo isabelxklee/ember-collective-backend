@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   resources :organizations
   resources :users
 
-  post '/login', to: 'auth#create'
   post '/users/login', to: 'users#login'
   get '/profile', to: 'users#profile'
   get '/users', to: 'users#index'
+  get '/users/stay_logged_in', to: "users#stay_logged_in"
 
 end

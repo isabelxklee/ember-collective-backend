@@ -3,6 +3,7 @@ class ApplicationController < ActionController::API
  
   def encode_token(payload)
     JWT.encode(payload, 'my_s3cr3t')
+    # encrypts payload
   end
  
   def auth_header
@@ -14,6 +15,7 @@ class ApplicationController < ActionController::API
       token = auth_header.split(' ')[1]
       begin
         JWT.decode(token, 'my_s3cr3t', true, algorithm: 'HS256')
+        # decodes the payload back to a regular string
       rescue JWT::DecodeError
         nil
       end
