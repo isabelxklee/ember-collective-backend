@@ -1,5 +1,6 @@
 class DonationChallengesController < ApplicationController
   before_action :set_donation_challenge, only: [:show, :update, :destroy]
+  skip_before_action :authorized, only: [:index, :show]
 
   # GET /donation_challenges
   def index
