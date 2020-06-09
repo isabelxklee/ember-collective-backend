@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :authorized, only: [:stay_logged_in]
-  skip_before_action :authorized, only: [:create, :index, :login]
-  
+  before_action :authorized, only: [:stay_logged_in, :show, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update]
+  # skip_before_action :authorized, only: [:create, :index, :login]
+
   def index
     @users = User.all
     render json: @users
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
   end
  
   def create
-    @user = User.create(user_params)
+    @user = User.create(user_params())
     if @user.valid?
       @token = encode_token(user_id: @user.id)
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
@@ -30,7 +31,10 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       @token = encode_token({user_id: @user.id})
-      render json: { user: UserSerializer.new(@user), jwt: @token }
+      render json: {
+        user: UserSerializer.new(@user),
+        jwt: @token
+      }
     else
       render json: {message: "Incorrect username or password"}
     end
@@ -54,6 +58,10 @@ class UsersController < ApplicationController
   end
  
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
  
   def user_params
     params.permit(:username, :email_address, :password, :password_confirmation)

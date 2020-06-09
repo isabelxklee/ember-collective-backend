@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  post '/create-account', to: 'users#create'
-  get '/profile', to: 'users#show'
   get '/users', to: 'users#index'
-  post '/login', to: 'users#login'
+  post '/create-account', to: 'users#create'
   get '/users/stay_logged_in', to: "users#stay_logged_in"
-
+  post '/login', to: 'users#login'
+  get '/profile', to: 'users#show'
+  
   resources :nominations
   resources :donation_challenges
   resources :tag_joiners
