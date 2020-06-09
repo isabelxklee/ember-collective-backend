@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :nominations
+  # has_many :donation_challenges
   
   validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
   validates :email_address, presence: true, uniqueness: true

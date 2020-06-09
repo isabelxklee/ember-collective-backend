@@ -42,7 +42,10 @@ class UsersController < ApplicationController
 
   def stay_logged_in
     @token = encode_token({user_id: @user.id})
-    render json: { user: UserSerializer.new(@user), jwt: @token }
+    render json: {
+      user: UserSerializer.new(@user),
+      jwt: @token
+    }
   end
 
   def update
