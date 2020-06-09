@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authorized, only: [:stay_logged_in]
   skip_before_action :authorized, only: [:create, :index, :login]
-  # before_action :authorized, only: [:stay_logged_in]
-
+  
   def index
     @users = User.all
     render json: @users
@@ -36,10 +36,10 @@ class UsersController < ApplicationController
     end
   end
 
-  # def stay_logged_in
-  #   @token = encode_token({user_id: @user.id})
-  #   render json: { user: UserSerializer.new(@user), jwt: @token }
-  # end
+  def stay_logged_in
+    @token = encode_token({user_id: @user.id})
+    render json: { user: UserSerializer.new(@user), jwt: @token }
+  end
 
   def update
     if @user.update(user_params)

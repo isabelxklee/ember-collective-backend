@@ -15,7 +15,7 @@ Organization.create(
 
 Organization.create(
   name: "Minnesota Healing Justice Network",
-  location: "Minnesota",
+  location: "Minneapolis, Minnesota",
   website: "https://www.minnesotahealingjusticenetwork.com",
   donation_link: "https://www.paypal.me/mnhealingjustice",
   tagline: "The Minnesota Healing Justice Network is a collaborative network of over 100 community healers, bodyworkers & birthworkers, therapists & herbalists, artists & educators, nurses & more centering the wellness of Black and Brown families through mutual aid, health equity and solidarity.",
@@ -33,14 +33,14 @@ Organization.create(
 
 Organization.create(
   name: "New York Immigrant Freedom Fund",
-  location: "New York",
+  location: "Brooklyn, New York",
   website: "https://nyimmigrantfreedom.org",
   donation_link: "https://nyimmigrantfreedom.org/donate/",
   tagline: "The New York Immigrant Freedom Fund – a program of the Brooklyn Community Bail Fund – pays immigration bonds for community members who are unable to afford it.",
   description: "The New York Immigrant Freedom Fund – a program of the Brooklyn Community Bail Fund – pays immigration bonds for community members who are unable to afford it. By paying bond, we are reuniting New Yorkers with their families and radically improving their chances of winning their immigration cases. Working in close partnership with community-based organizations, we are committed to building power in immigrant communities as we fight to end immigration detention. Our partners include African Communities Together, Black Alliance for Just Immigration, Families for Freedom, Immigrant Defense Project, Make the Road NY, and Surveillance Technology Oversight Project."
   )
 
-  Organization.create(
+Organization.create(
   name: "Black Lives Matter",
   location: "U.S.A.",
   website: "https://blacklivesmatter.com",
@@ -49,13 +49,31 @@ Organization.create(
   description: "#BlackLivesMatter was founded in 2013 in response to the acquittal of Trayvon Martin’s murderer. Black Lives Matter Foundation, Inc is a global organization in the US, UK, and Canada, whose mission is to eradicate white supremacy and build local power to intervene in violence inflicted on Black communities by the state and vigilantes. By combating and countering acts of violence, creating space for Black imagination and innovation, and centering Black joy, we are winning immediate improvements in our lives."
   )
 
-  Organization.create(
-    name: "Community Justice Exchange",
-    location: "U.S.A.",
-    website: "https://www.communityjusticeexchange.org/nbfn-directory",
-    donation_link: "https://www.communityjusticeexchange.org/nbfn-directory",
-    tagline: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention.",
-    description: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention. We provide support to community-based organizations across the country that are experimenting with bottom-up interventions that contest the current operation and function of the criminal legal and immigration detention systems.  CJE produces tools and resources for organizers using community justice tactics to creatively tackle multiple drivers of criminalization and incarceration— including, but not limited to, money bail, court fees and fines, probation and parole, pretrial detention & supervision, and immigration detention & supervision. The Community Justice Exchange is also the host of the National Bail Fund Network, a formation of over sixty community-led bail and bond funds that are part of campaigns to end pretrial and immigration detention."
-    )
+Organization.create(
+  name: "Community Justice Exchange",
+  location: "U.S.A.",
+  website: "https://www.communityjusticeexchange.org/nbfn-directory",
+  donation_link: "https://www.communityjusticeexchange.org/nbfn-directory",
+  tagline: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention.",
+  description: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention. We provide support to community-based organizations across the country that are experimenting with bottom-up interventions that contest the current operation and function of the criminal legal and immigration detention systems.  CJE produces tools and resources for organizers using community justice tactics to creatively tackle multiple drivers of criminalization and incarceration— including, but not limited to, money bail, court fees and fines, probation and parole, pretrial detention & supervision, and immigration detention & supervision. The Community Justice Exchange is also the host of the National Bail Fund Network, a formation of over sixty community-led bail and bond funds that are part of campaigns to end pretrial and immigration detention."
+  )
+
+Organization.create(
+  name: "Know Your Rights Camp",
+  location: "U.S.A.",
+  website: "https://www.knowyourrightscamp.com",
+  donation_link: "https://secure.eifoundation.org/site/Donation2?df_id=6082&mfc_pref=T&6082.donation=form1&s_src=kyrcmain&utm_source=kyrcmain",
+  tagline: "A free campaign for youth to raise awareness on higher education, self empowerment, and interacting with law enforcement.",
+  description: "Our mission is to advance the liberation and well-being of Black and Brown communities through education, self-empowerment, mass-mobilization and the creation of new systems that elevate the next generation of change leaders."
+  )
+
+Organization.create(
+  name: "Transgender Law Center",
+  location: "Oakland, California",
+  website: "https://transgenderlawcenter.org",
+  donation_link: "https://transgenderlawcenter.org/donate",
+  tagline: "Transgender Law Center (TLC) is the largest national trans-led organization advocating for a world in which all people are free to define themselves and their futures. ",
+  description: "Founded in 2002, Transgender Law Center (TLC) has grown into the largest trans-specific, trans-led organization in the United States. Our advocacy and precedent-setting litigation victories—in areas including employment, prison conditions, education, immigration, and healthcare—protect and advance the rights of transgender and gender nonconforming people across the country. Through our organizing and movement-building programs, TLC assists, informs, and empowers thousands of individual community members a year and builds towards a long-term, national, trans-led movement for liberation."
+  )
 
 Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
