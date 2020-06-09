@@ -1,8 +1,10 @@
 User.destroy_all
 Organization.destroy_all
 Nomination.destroy_all
+DonationChallenge.destroy_all
 
 isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123")
+frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123")
 
 Organization.create(
   name: "Black Visions Collective",
@@ -77,3 +79,5 @@ Organization.create(
   )
 
 Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
+DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 500)
+DonationChallenge.create(sender_id: frankie.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 100)
