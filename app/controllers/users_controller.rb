@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorized, only: [:stay_logged_in, :show, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update]
-  # skip_before_action :authorized, only: [:create, :index, :login]
 
   def index
     @users = User.all
