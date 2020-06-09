@@ -80,4 +80,5 @@ Organization.create(
 
 Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 500)
+DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 50)
 DonationChallenge.create(sender_id: frankie.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 100)
