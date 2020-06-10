@@ -74,8 +74,36 @@ Organization.create(
   location: "Oakland, California",
   website: "https://transgenderlawcenter.org",
   donation_link: "https://transgenderlawcenter.org/donate",
-  tagline: "Transgender Law Center (TLC) is the largest national trans-led organization advocating for a world in which all people are free to define themselves and their futures. ",
+  tagline: "Transgender Law Center (TLC) is the largest national trans-led organization advocating for a world in which all people are free to define themselves and their futures.",
   description: "Founded in 2002, Transgender Law Center (TLC) has grown into the largest trans-specific, trans-led organization in the United States. Our advocacy and precedent-setting litigation victories—in areas including employment, prison conditions, education, immigration, and healthcare—protect and advance the rights of transgender and gender nonconforming people across the country. Through our organizing and movement-building programs, TLC assists, informs, and empowers thousands of individual community members a year and builds towards a long-term, national, trans-led movement for liberation."
+  )
+
+Organization.create(
+  name: "No New Jails NYC",
+  location: "Brooklyn, New York",
+  website: "https://www.nonewjails.nyc",
+  donation_link: "https://www.paypal.me/nonewjailsnyc",
+  tagline: "Our plan is an open door for community and political stakeholders to join us in envisioning abolition in NYC, by divesting from police and prisons, and investing in community.",
+  description: "Without your input, the City developed a $10.6 billion scheme to build four new jails without any binding commitment to close Rikers Island. No New Jails NYC formed to ensure that Rikers Island closes immediately without the construction of new jails. We believe that the people of New York City, especially those targeted for incarceration, are against any plan to build new jails, where all the horrors of Rikers will be re-enacted, simply at new addresses with fresh coats of paint."
+  )
+
+Organization.create(
+  name: "IntegrateNYC",
+  location: "Brooklyn, New York",
+  website: "https://www.integratenyc.org/home/#introduction",
+  donation_link: "https://secure.givelively.org/donate/integratenyc-inc/1-1-million-dollars-for-1-1-million-students",
+  tagline: "IntegrateNYC is a youth-led organization that stands for integration and equity in New York City schools.",
+  description: "We, the students, are the best experts on the impacts of this segregation and inequality. At IntegrateNYC, we are also designers of solutions, advocates for transformative policy, and visionaries for a more just future. We have learned from the past, and we do not want to stop at desegregation. True, meaningful integration requires a transformation in our school system that centers students and communities of color. We have developed and are advocating for 5Rs of Real Integration to create lasting, revolutionary change in our school system. We also stand for Real Representation of young people in decision making at local, city, state, and federal levels."
+  )
+
+
+Organization.create(
+  name: "The Okra Project",
+  location: "Brooklyn, New York",
+  website: "https://www.theokraproject.com",
+  donation_link: "https://secure.givelively.org/donate/integratenyc-inc/1-1-million-dollars-for-1-1-million-students",
+  tagline: "The Okra Project is a collective that seeks to address the global crisis faced by Black Trans people by bringing home cooked, healthy, and culturally specific meals and resources to Black Trans People wherever we can reach them.",
+  description: "Based on individual donations, The Okra Project pays Black Trans chefs to go into the homes of Black Trans people to cook them a healthy and home-cooked meal at absolutely no cost to our Black TGNC siblings. For those Black Trans folks currently experiencing homeless or whose homes cannot support our chef’s cooking, The Okra Project has partnered with institutions like Osborne Association and other community spaces to deliver foods."
   )
 
 Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
