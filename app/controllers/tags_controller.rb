@@ -1,19 +1,16 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
-  # GET /tags
   def index
     @tags = Tag.all
-
     render json: @tags
   end
 
-  # GET /tags/1
   def show
     render json: @tag
   end
 
-  # POST /tags
   def create
     @tag = Tag.new(tag_params)
 
@@ -46,6 +43,6 @@ class TagsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tag_params
-      params.require(:tag).permit(:content)
+      params.permit(:content)
     end
 end

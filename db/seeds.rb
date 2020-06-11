@@ -2,11 +2,13 @@ User.destroy_all
 Organization.destroy_all
 Nomination.destroy_all
 DonationChallenge.destroy_all
+Tag.destroy_all
+TagJoiner.destroy_all
 
 isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123")
 frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123")
 
-Organization.create(
+bvc = Organization.create(
   name: "Black Visions Collective",
   location: "Minnesota",
   website: "https://www.blackvisionsmn.org",
@@ -15,7 +17,7 @@ Organization.create(
   description: "BLVC is committed to a long term vision in which ALL Black lives not only matter, but are able to thrive. What we know to be true in order to create this world is that oppressed people, especially Black people, need to build collective power in order to create systems transformation. Through the development of powerful strategic campaigns, we seek to expand the power of Black people across the Twin Cities metro area and Minnesota. This can look like delivering mobilization and action goals as part of a national coalition in which Black lives are centered, but it most often looks like visioning and leading targeted collaborative local campaigns that advance a concrete impact for people’s lives here, while also advancing a shift in public narrative that connects to transformative long-term change."
   )
 
-Organization.create(
+healing_justice = Organization.create(
   name: "Minnesota Healing Justice Network",
   location: "Minneapolis, Minnesota",
   website: "https://www.minnesotahealingjusticenetwork.com",
@@ -24,7 +26,7 @@ Organization.create(
   description: "We provide a supportive professional community and mutual aid network for wellness and healing justice practitioners who also identify as IBPOC (indigenous, black, or people of color). In order to reduce racial health disparities, we recognize the call for community care and collectivist cultural practices, for ourselves, our patients and students, and all Minnesotans."
   )
 
-Organization.create(
+bail_project = Organization.create(
   name: "The Bail Project",
   location: "U.S.A.",
   website: "https://bailproject.org",
@@ -33,7 +35,7 @@ Organization.create(
   description: "The Bail Project, Inc. is a non-profit organization designed to combat mass incarceration by disrupting the money bail system ‒ one person at a time. We believe that paying bail for someone in need is an act of resistance against a system that criminalizes race and poverty and an act of solidarity with local communities and movements for decarceration. Over the next five years, The Bail Project will open dozens of sites in high-need jurisdictions with the goal of paying bail for tens of thousands of low-income Americans, all while collecting stories and data that prove money bail is not necessary to ensure people return to court. We won’t stop until meaningful change is achieved and the presumption of innocence is no longer for sale."
   )
 
-Organization.create(
+ny_immigrant = Organization.create(
   name: "New York Immigrant Freedom Fund",
   location: "Brooklyn, New York",
   website: "https://nyimmigrantfreedom.org",
@@ -42,7 +44,7 @@ Organization.create(
   description: "The New York Immigrant Freedom Fund – a program of the Brooklyn Community Bail Fund – pays immigration bonds for community members who are unable to afford it. By paying bond, we are reuniting New Yorkers with their families and radically improving their chances of winning their immigration cases. Working in close partnership with community-based organizations, we are committed to building power in immigrant communities as we fight to end immigration detention. Our partners include African Communities Together, Black Alliance for Just Immigration, Families for Freedom, Immigrant Defense Project, Make the Road NY, and Surveillance Technology Oversight Project."
   )
 
-Organization.create(
+blm = Organization.create(
   name: "Black Lives Matter",
   location: "U.S.A.",
   website: "https://blacklivesmatter.com",
@@ -51,7 +53,7 @@ Organization.create(
   description: "#BlackLivesMatter was founded in 2013 in response to the acquittal of Trayvon Martin’s murderer. Black Lives Matter Foundation, Inc is a global organization in the US, UK, and Canada, whose mission is to eradicate white supremacy and build local power to intervene in violence inflicted on Black communities by the state and vigilantes. By combating and countering acts of violence, creating space for Black imagination and innovation, and centering Black joy, we are winning immediate improvements in our lives."
   )
 
-Organization.create(
+cje = Organization.create(
   name: "Community Justice Exchange",
   location: "U.S.A.",
   website: "https://www.communityjusticeexchange.org/nbfn-directory",
@@ -60,7 +62,7 @@ Organization.create(
   description: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention. We provide support to community-based organizations across the country that are experimenting with bottom-up interventions that contest the current operation and function of the criminal legal and immigration detention systems.  CJE produces tools and resources for organizers using community justice tactics to creatively tackle multiple drivers of criminalization and incarceration— including, but not limited to, money bail, court fees and fines, probation and parole, pretrial detention & supervision, and immigration detention & supervision. The Community Justice Exchange is also the host of the National Bail Fund Network, a formation of over sixty community-led bail and bond funds that are part of campaigns to end pretrial and immigration detention."
   )
 
-Organization.create(
+kyrc = Organization.create(
   name: "Know Your Rights Camp",
   location: "U.S.A.",
   website: "https://www.knowyourrightscamp.com",
@@ -69,7 +71,7 @@ Organization.create(
   description: "Our mission is to advance the liberation and well-being of Black and Brown communities through education, self-empowerment, mass-mobilization and the creation of new systems that elevate the next generation of change leaders."
   )
 
-Organization.create(
+trans_law_center = Organization.create(
   name: "Transgender Law Center",
   location: "Oakland, California",
   website: "https://transgenderlawcenter.org",
@@ -78,7 +80,7 @@ Organization.create(
   description: "Founded in 2002, Transgender Law Center (TLC) has grown into the largest trans-specific, trans-led organization in the United States. Our advocacy and precedent-setting litigation victories—in areas including employment, prison conditions, education, immigration, and healthcare—protect and advance the rights of transgender and gender nonconforming people across the country. Through our organizing and movement-building programs, TLC assists, informs, and empowers thousands of individual community members a year and builds towards a long-term, national, trans-led movement for liberation."
   )
 
-Organization.create(
+no_new_jails = Organization.create(
   name: "No New Jails NYC",
   location: "Brooklyn, New York",
   website: "https://www.nonewjails.nyc",
@@ -87,7 +89,7 @@ Organization.create(
   description: "Without your input, the City developed a $10.6 billion scheme to build four new jails without any binding commitment to close Rikers Island. No New Jails NYC formed to ensure that Rikers Island closes immediately without the construction of new jails. We believe that the people of New York City, especially those targeted for incarceration, are against any plan to build new jails, where all the horrors of Rikers will be re-enacted, simply at new addresses with fresh coats of paint."
   )
 
-Organization.create(
+integrate_nyc = Organization.create(
   name: "IntegrateNYC",
   location: "Brooklyn, New York",
   website: "https://www.integratenyc.org/home/#introduction",
@@ -96,8 +98,7 @@ Organization.create(
   description: "We, the students, are the best experts on the impacts of this segregation and inequality. At IntegrateNYC, we are also designers of solutions, advocates for transformative policy, and visionaries for a more just future. We have learned from the past, and we do not want to stop at desegregation. True, meaningful integration requires a transformation in our school system that centers students and communities of color. We have developed and are advocating for 5Rs of Real Integration to create lasting, revolutionary change in our school system. We also stand for Real Representation of young people in decision making at local, city, state, and federal levels."
   )
 
-
-Organization.create(
+okra_project = Organization.create(
   name: "The Okra Project",
   location: "Brooklyn, New York",
   website: "https://www.theokraproject.com",
@@ -110,3 +111,42 @@ Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 500)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 50)
 DonationChallenge.create(sender_id: frankie.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 100)
+
+tag_queer = Tag.create(content: "queer")
+tag_trans = Tag.create(content: "trans")
+tag_bail_fund = Tag.create(content: "bail-fund")
+tag_immigration = Tag.create(content: "immigration")
+tag_youth = Tag.create(content: "youth")
+tag_prison = Tag.create(content: "prison-abolition")
+tag_legal = Tag.create(content: "legal")
+tag_food = Tag.create(content: "food")
+tag_community = Tag.create(content: "community")
+
+TagJoiner.create(tag_id: tag_bail_fund.id, org_id: bail_project.id)
+
+TagJoiner.create(tag_id: tag_queer.id, org_id: trans_law_center.id)
+TagJoiner.create(tag_id: tag_legal.id, org_id: trans_law_center.id)
+TagJoiner.create(tag_id: tag_trans.id, org_id: trans_law_center.id)
+
+TagJoiner.create(tag_id: tag_youth.id, org_id: kyrc.id)
+
+TagJoiner.create(tag_id: tag_legal.id, org_id: ny_immigrant.id)
+TagJoiner.create(tag_id: tag_immigration.id, org_id: ny_immigrant.id)
+
+TagJoiner.create(tag_id: tag_food.id, org_id: okra_project.id)
+TagJoiner.create(tag_id: tag_community.id, org_id: okra_project.id)
+
+TagJoiner.create(tag_id: tag_prison.id, org_id: no_new_jails.id)
+TagJoiner.create(tag_id: tag_legal.id, org_id: no_new_jails.id)
+
+TagJoiner.create(tag_id: tag_youth.id, org_id: integrate_nyc.id)
+TagJoiner.create(tag_id: tag_community.id, org_id: integrate_nyc.id)
+
+TagJoiner.create(tag_id: tag_bail_fund.id, org_id: cje.id)
+TagJoiner.create(tag_id: tag_legal.id, org_id: cje.id)
+
+TagJoiner.create(tag_id: tag_community.id, org_id: blm.id)
+
+TagJoiner.create(tag_id: tag_community.id, org_id: healing_justice.id)
+
+TagJoiner.create(tag_id: tag_community.id, org_id: bvc.id)

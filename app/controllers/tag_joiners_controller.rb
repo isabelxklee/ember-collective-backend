@@ -1,5 +1,6 @@
 class TagJoinersController < ApplicationController
   before_action :set_tag_joiner, only: [:show, :update, :destroy]
+  skip_before_action :authorized
 
   # GET /tag_joiners
   def index
@@ -46,6 +47,6 @@ class TagJoinersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tag_joiner_params
-      params.require(:tag_joiner).permit(:tag_id, :org_id, :nteger)
+      params.permit(:tag_id, :org_id)
     end
 end
