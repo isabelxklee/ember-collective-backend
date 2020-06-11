@@ -44,15 +44,6 @@ ny_immigrant = Organization.create(
   description: "The New York Immigrant Freedom Fund – a program of the Brooklyn Community Bail Fund – pays immigration bonds for community members who are unable to afford it. By paying bond, we are reuniting New Yorkers with their families and radically improving their chances of winning their immigration cases. Working in close partnership with community-based organizations, we are committed to building power in immigrant communities as we fight to end immigration detention. Our partners include African Communities Together, Black Alliance for Just Immigration, Families for Freedom, Immigrant Defense Project, Make the Road NY, and Surveillance Technology Oversight Project."
   )
 
-blm = Organization.create(
-  name: "Black Lives Matter",
-  location: "U.S.A.",
-  website: "https://blacklivesmatter.com",
-  donation_link: "https://secure.actblue.com/donate/ms_blm_homepage_2019",
-  tagline: "Black Lives Matter Foundation, Inc is a global organization in the US, UK, and Canada, whose mission is to eradicate white supremacy and build local power to intervene in violence inflicted on Black communities by the state and vigilantes.",
-  description: "#BlackLivesMatter was founded in 2013 in response to the acquittal of Trayvon Martin’s murderer. Black Lives Matter Foundation, Inc is a global organization in the US, UK, and Canada, whose mission is to eradicate white supremacy and build local power to intervene in violence inflicted on Black communities by the state and vigilantes. By combating and countering acts of violence, creating space for Black imagination and innovation, and centering Black joy, we are winning immediate improvements in our lives."
-  )
-
 cje = Organization.create(
   name: "Community Justice Exchange",
   location: "U.S.A.",
@@ -144,8 +135,6 @@ TagJoiner.create(tag_id: tag_community.id, org_id: integrate_nyc.id)
 
 TagJoiner.create(tag_id: tag_bail_fund.id, org_id: cje.id)
 TagJoiner.create(tag_id: tag_legal.id, org_id: cje.id)
-
-TagJoiner.create(tag_id: tag_community.id, org_id: blm.id)
 
 TagJoiner.create(tag_id: tag_community.id, org_id: healing_justice.id)
 
