@@ -4,6 +4,7 @@ Nomination.destroy_all
 DonationChallenge.destroy_all
 Tag.destroy_all
 TagJoiner.destroy_all
+Resource.destroy_all
 
 isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123")
 frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123")
@@ -98,6 +99,15 @@ okra_project = Organization.create(
   description: "Based on individual donations, The Okra Project pays Black Trans chefs to go into the homes of Black Trans people to cook them a healthy and home-cooked meal at absolutely no cost to our Black TGNC siblings. For those Black Trans folks currently experiencing homeless or whose homes cannot support our chef’s cooking, The Okra Project has partnered with institutions like Osborne Association and other community spaces to deliver foods."
   )
 
+trans_justice = Organization.create(
+  name: "Trans Justice Funding Project",
+  location: "U.S.A.",
+  website: "https://www.transjusticefundingproject.org",
+  donation_link: "https://connect.clickandpledge.com/w/Form/fcd63e3f-e625-4589-a7b7-ac6c92ce3406",
+  tagline: "The Trans Justice Funding Project is a community-led funding initiative founded in 2012 to support grassroots, trans justice groups run by and for trans people.",
+  description: "The Trans Justice Funding Project is a community-led funding initiative founded in 2012 to support grassroots, trans justice groups run by and for trans people. We make grants annually by bringing together a panel of six trans justice activists from around the country to carefully review every application we receive. We center the leadership of trans people organizing around their experiences with racism, economic injustice, transmisogyny, ableism, immigration, incarceration, and other intersecting oppressions. Every penny we raise goes to our grantees with no restrictions and no strings attached because we truly believe in trans leadership."
+  )
+
 Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 500)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 50)
@@ -139,3 +149,35 @@ TagJoiner.create(tag_id: tag_legal.id, org_id: cje.id)
 TagJoiner.create(tag_id: tag_community.id, org_id: healing_justice.id)
 
 TagJoiner.create(tag_id: tag_community.id, org_id: bvc.id)
+
+TagJoiner.create(tag_id: tag_queer.id, org_id: trans_justice.id)
+TagJoiner.create(tag_id: tag_trans.id, org_id: trans_justice.id)
+TagJoiner.create(tag_id: tag_community.id, org_id: trans_justice.id)
+
+Resource.create(
+  title: "The Violent State: Black Women's Invisible Struggle Against Police Violence",
+  author: "Michelle S. Jacobs",
+  link: "https://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1462&context=wmjowl",
+  category: "academic",
+  description: "The theme of this special issue, Women and Law Enforcement, is particularly timely. Incidents of police brutality have reached a new level of public visibility. Though not everyone agrees on whether the use of violence by the police is inappropriate, conversations about police violence are occurring everywhere. An exploration of the topic of Women and Law Enforcement would not be complete without at least one article that puts Black women at the center of the lens of analysis, particularly as it relates to the state-sponsored violence Black women experience at the hands of law enforcement. This Article is about law enforcement’s violence towards Black women specifically. The reader should not feel free to substitute the phrase “women of color” where “Black women” has been written.")
+
+Resource.create(
+  title: "The story of Black queer women imprisoned for defending themselves to reminds us this criminal system cannot save us",
+  author: "Gabrielle Noel",
+  link: "http://blackyouthproject.com/the-story-of-black-queer-women-imprisoned-for-defending-themselves-to-reminds-us-this-criminal-system-cannot-save-us/",
+  category: "article",
+  description: "The legal system was never built with Black queer people in mind. This system assigns victimhood, or refuses it, according to social biases, and society’s perception of who is more likely to be a victim or more credible thus affects who is allowed to receive justice. When it comes to sexual harassment, sexual assault, and other areas of sexual violence, Black women have been historically left out of that allowance.")
+
+Resource.create(
+  title: "In Defense of Looting",
+  author: "Vicky Osterweil",
+  link: "https://thenewinquiry.com/in-defense-of-looting/",
+  category: "article",
+  description: "For most of America’s history, one of the most righteous anti-white supremacist tactics available was looting.")
+
+Resource.create(
+  title: "Mapping Police Violence",
+  author: "Samuel Sinyangwe and DeRay McKesson",
+  link: "https://mappingpoliceviolence.org",
+  category: "data",
+  description: "We cannot wait to know the true scale of police violence against our communities. And in a country where at least three people are killed by police every day, we cannot wait for police departments to provide us with these answers. The maps and charts on this site aim to provide us with the answers we need.")
