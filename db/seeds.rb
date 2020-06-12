@@ -181,3 +181,24 @@ Resource.create(
   link: "https://mappingpoliceviolence.org",
   category: "data",
   description: "We cannot wait to know the true scale of police violence against our communities. And in a country where at least three people are killed by police every day, we cannot wait for police departments to provide us with these answers. The maps and charts on this site aim to provide us with the answers we need.")
+
+
+Resource.create(
+  title: "Are Prisons Obsolete?",
+  author: "Angela Y. Davis",
+  link: "https://www.feministes-radicales.org/wp-content/uploads/2010/11/Angela-Davis-Are_Prisons_Obsolete.pdf",
+  category: "book",
+  description: "With her characteristic brilliance, grace and radical audacity, Angela Y. Davis has put the case for the latest abolition movement in American life: the abolition of the prison. As she quite correctly notes, American life is replete with abolition movements, and when they were engaged in these struggles, their chances of success seemed almost unthinkable.")
+
+Resource.create(
+  title: "How to Protest Safely",
+  author: "Amnesty International",
+  link: "https://www.amnestyusa.org/protests/",
+  category: "guide",
+  description: "Everyone has the right to assemble and to peacefully protest. For years, activists have been calling for equality for Black lives and Black communities and broad reforms in our policing and criminal justice systems. From activists organizing in Ferguson to leaders like Colin Kaepernick showing their solidarity, calls for change have been resonating louder and louder with each life lost.")
+
+
+
+
+
+
