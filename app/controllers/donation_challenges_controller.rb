@@ -14,7 +14,8 @@ class DonationChallengesController < ApplicationController
   def create
     @donation_challenge = DonationChallenge.create(donation_challenge_params())
     if @donation_challenge.valid?
-      render json: @donation_challenge, status: :created, location: @donation_challenge
+      # render json: @donation_challenge, status: :created, location: @donation_challenge
+      render json: {message: "Your donation match challenge was sent!"}
     else
       render json: @donation_challenge.errors, status: :unprocessable_entity
     end

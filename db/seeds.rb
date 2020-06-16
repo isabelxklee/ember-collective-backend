@@ -203,19 +203,3 @@ Resource.create(
   link: "http://www.ijeomaoluo.com/writing",
   category: "book",
   description: "In So You Want to Talk About Race, Ijeoma Oluo guides readers of all races through subjects ranging from intersectionality and affirmative action to “model minorities” in an attempt to make the seemingly impossible possible: honest conversations about race and racism, and how they infect almost every aspect of American life.")
-
-Resource.create(
-  title: "White Fragility: Why It’s So Hard For White People To Talk About Racism",
-  author: "Robin DiAngelo",
-  link: "https://robindiangelo.com/publications/",
-  category: "book",
-  description: "White people in North America live in a social environment that protects and insulates them from race-based stress. This insulated environment of racial protection builds white expectations for racial comfort while at the same time lowering the ability to tolerate racial stress.")
-
-Resource.create(
-  title: "Reading Guide for 'White Fragility' by Robin DiAngelo",
-  author: "Özlem Sensoy and Robin DiAngelo",
-  link: "https://www.beacon.org/assets/pdfs/whitefragilityreadingguide.pdf",
-  category: "reading-guide",
-  description: "This reading guide is intended to support formal and informal discussions of White Fragility. We offer the following pedagogical tips as you organize your discussion.")
-
-
