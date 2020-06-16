@@ -34,9 +34,10 @@ In your terminal...
     
 3. Create migrations, migrate and seed:
 
-    ```$ rails db:create
-       $ rails db:migrate
-       $ rails db:seed
+    ```
+    $ rails db:create
+    $ rails db:migrate
+    $ rails db:seed
        
 4. Last step, launch the rails server!
 
