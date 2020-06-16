@@ -2,7 +2,7 @@
 * Ruby on Rails API for the Ember Collective backend.
 
 ## Getting Started
-To get started, you will only need Ruby on Rails and Postgres. To do so, you must have Homebrew and Ruby installed first.
+To get started, you will need Ruby on Rails and Postgres.
 
 ### Node installation on OS X
 
@@ -38,9 +38,5 @@ In your terminal...
        $ rails db:migrate
        $ rails db:seed```
        
-## Launch The Server
-
-1. Last step, launch the rails server!
+4. Last step, launch the rails server!
     ```$ rails s```
-    
-### Start developing!
