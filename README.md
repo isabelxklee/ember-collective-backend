@@ -1,24 +1,46 @@
-# README
+## Ruby on Rails API
+* Ruby on Rails API for the Ember Collective backend.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
+To get started, you will only need Ruby on Rails and Postgres. To do so, you must have Homebrew and Ruby installed first.
 
-Things you may want to cover:
+### Node installation on OS X
 
-* Ruby version
+In your terminal...
 
-* System dependencies
+1. Install [Homebrew](https://brew.sh/)
 
-* Configuration
+    ```$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"```
+  
+2. Install [Ruby](https://www.ruby-lang.org/en/)
+    
+    ```$ brew install ruby```
 
-* Database creation
+3. Install [Rails](https://rubyonrails.org/)
 
-* Database initialization
+    ```$ gem install rails```
 
-* How to run the test suite
+4. Install [PostgreSQL](https://www.postgresql.org/)
 
-* Services (job queues, cache servers, search engines, etc.)
+    ```$ brew install postgresql```
 
-* Deployment instructions
 
-* ...
+## Installation
+
+1. Clone the repo and cd into the folder
+2. Bundle Install
+
+    ```$ bundle install```
+    
+3. Create migrations, migrate and seed:
+
+    ```$ rails db:create
+       $ rails db:migrate
+       $ rails db:seed```
+       
+## Launch The Server
+
+1. Last step, launch the rails server!
+    ```$ rails s```
+    
+### Start developing!
