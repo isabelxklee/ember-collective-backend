@@ -7,7 +7,7 @@ TagJoiner.destroy_all
 Resource.destroy_all
 
 isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123")
-frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123")
+frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123", created_at: "2020-05-17 17:13:12")
 
 bvc = Organization.create(
   name: "Black Visions Collective",
@@ -136,6 +136,8 @@ TagJoiner.create(tag_id: tag_immigration.id, org_id: ny_immigrant.id)
 
 TagJoiner.create(tag_id: tag_food.id, org_id: okra_project.id)
 TagJoiner.create(tag_id: tag_community.id, org_id: okra_project.id)
+TagJoiner.create(tag_id: tag_queer.id, org_id: okra_project.id)
+TagJoiner.create(tag_id: tag_trans.id, org_id: okra_project.id)
 
 TagJoiner.create(tag_id: tag_prison.id, org_id: no_new_jails.id)
 TagJoiner.create(tag_id: tag_legal.id, org_id: no_new_jails.id)
