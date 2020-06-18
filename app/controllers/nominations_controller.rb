@@ -1,6 +1,6 @@
 class NominationsController < ApplicationController
   before_action :set_nomination, only: [:show, :update, :destroy]
-  skip_before_action :authorized, only: [:index, :show]
+  skip_before_action :authorized, only: [:index, :show, :create]
 
   def index
     @nominations = Nomination.all
@@ -13,9 +13,9 @@ class NominationsController < ApplicationController
   end
 
   def create
-    @nomination = Nomination.new(nomination_params)
+    @nomination = Nomination.create(nomination_params())
 
-    if @nomination.save
+    if @nomination.valid?
       render json: @nomination, status: :created, location: @nomination
     else
       render json: @nomination.errors, status: :unprocessable_entity

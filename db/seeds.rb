@@ -108,7 +108,21 @@ trans_justice = Organization.create(
   description: "The Trans Justice Funding Project is a community-led funding initiative founded in 2012 to support grassroots, trans justice groups run by and for trans people. We make grants annually by bringing together a panel of six trans justice activists from around the country to carefully review every application we receive. We center the leadership of trans people organizing around their experiences with racism, economic injustice, transmisogyny, ableism, immigration, incarceration, and other intersecting oppressions. Every penny we raise goes to our grantees with no restrictions and no strings attached because we truly believe in trans leadership."
   )
 
-Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
+loveland = Organization.create(
+  name: "Loveland Foundation",
+  location: "Ohio",
+  website: "https://thelovelandfoundation.org",
+  donation_link: "https://www.flipcause.com/secure/team_fundraiser/NzU4MzM=/6860",
+  tagline: "Loveland Foundation is committed to showing up for communities of color in unique and powerful ways, with a particular focus on Black women and girls. Our resources and initiatives are collaborative and they prioritize opportunity, access, validation, and healing.",
+  description: "The Loveland Foundation was established in 2018 by Rachel Cargle in response to her widely successful birthday wish fundraiser, Therapy for Black Women and Girls. Her enthusiastic social media community raised over $250,000, which made it possible for Black women and girls nationally to receive therapy support. Black women and girls deserve access to healing, and that healing will impact generations.
+
+  The Loveland Foundation is the official continuation of this effort to bring opportunity and healing to communities of color, and especially to Black women and girls. Through fellowships, residency programs, listening tours, and more, ultimately we hope to contribute to both the empowerment and the liberation of the communities we serve."
+  )
+
+Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
+
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 500)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 50)
 DonationChallenge.create(sender_id: frankie.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 100)
