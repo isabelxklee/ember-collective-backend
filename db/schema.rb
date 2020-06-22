@@ -15,6 +15,11 @@ ActiveRecord::Schema.define(version: 202006032213113) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "category_joiners", force: :cascade do |t|
+    t.integer "resource_id"
+    t.integer "category_id"
+  end
+
   create_table "donation_challenges", force: :cascade do |t|
     t.integer "sender_id"
     t.integer "receiver_id"
