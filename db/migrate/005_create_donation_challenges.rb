@@ -4,6 +4,7 @@ class CreateDonationChallenges < ActiveRecord::Migration[6.0]
       t.integer :sender_id
       t.integer :receiver_id
       t.integer :amount
+      t.integer :org_id
 
       t.timestamps
     end

@@ -6,6 +6,7 @@ class CreateOrganizations < ActiveRecord::Migration[6.0]
       t.string :website
       t.string :donation_link
       t.string :description
+      t.string :tagline
 
       t.timestamps
     end

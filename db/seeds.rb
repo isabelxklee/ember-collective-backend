@@ -5,6 +5,8 @@ DonationChallenge.destroy_all
 Tag.destroy_all
 TagJoiner.destroy_all
 Resource.destroy_all
+Category.destroy_all
+CategoryJoiner.destroy_all
 
 isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123")
 frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123", created_at: "2020-05-17 17:13:12")
@@ -170,52 +172,61 @@ TagJoiner.create(tag_id: tag_queer.id, org_id: trans_justice.id)
 TagJoiner.create(tag_id: tag_trans.id, org_id: trans_justice.id)
 TagJoiner.create(tag_id: tag_community.id, org_id: trans_justice.id)
 
-Resource.create(
+michelle_jacobs = Resource.create(
   title: "The Violent State: Black Women's Invisible Struggle Against Police Violence",
   author: "Michelle S. Jacobs",
   link: "https://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1462&context=wmjowl",
-  category: "academic",
   description: "The theme of this special issue, Women and Law Enforcement, is particularly timely. Incidents of police brutality have reached a new level of public visibility. Though not everyone agrees on whether the use of violence by the police is inappropriate, conversations about police violence are occurring everywhere. An exploration of the topic of Women and Law Enforcement would not be complete without at least one article that puts Black women at the center of the lens of analysis, particularly as it relates to the state-sponsored violence Black women experience at the hands of law enforcement. This Article is about law enforcement’s violence towards Black women specifically. The reader should not feel free to substitute the phrase “women of color” where “Black women” has been written.")
 
-Resource.create(
+gabby = Resource.create(
   title: "The story of Black queer women imprisoned for defending themselves to reminds us this criminal system cannot save us",
   author: "Gabrielle Noel",
   link: "http://blackyouthproject.com/the-story-of-black-queer-women-imprisoned-for-defending-themselves-to-reminds-us-this-criminal-system-cannot-save-us/",
-  category: "article",
   description: "The legal system was never built with Black queer people in mind. This system assigns victimhood, or refuses it, according to social biases, and society’s perception of who is more likely to be a victim or more credible thus affects who is allowed to receive justice. When it comes to sexual harassment, sexual assault, and other areas of sexual violence, Black women have been historically left out of that allowance.")
 
-Resource.create(
+defense_of_looting = Resource.create(
   title: "In Defense of Looting",
   author: "Vicky Osterweil",
   link: "https://thenewinquiry.com/in-defense-of-looting/",
-  category: "article",
   description: "For most of America’s history, one of the most righteous anti-white supremacist tactics available was looting.")
 
-Resource.create(
+mapping_police_violence = Resource.create(
   title: "Mapping Police Violence",
   author: "Samuel Sinyangwe and DeRay McKesson",
   link: "https://mappingpoliceviolence.org",
-  category: "data",
   description: "We cannot wait to know the true scale of police violence against our communities. And in a country where at least three people are killed by police every day, we cannot wait for police departments to provide us with these answers. The maps and charts on this site aim to provide us with the answers we need.")
 
-
-Resource.create(
+angela_davis = Resource.create(
   title: "Are Prisons Obsolete?",
   author: "Angela Y. Davis",
   link: "https://www.feministes-radicales.org/wp-content/uploads/2010/11/Angela-Davis-Are_Prisons_Obsolete.pdf",
-  category: "book",
   description: "With her characteristic brilliance, grace and radical audacity, Angela Y. Davis has put the case for the latest abolition movement in American life: the abolition of the prison. As she quite correctly notes, American life is replete with abolition movements, and when they were engaged in these struggles, their chances of success seemed almost unthinkable.")
 
-Resource.create(
+protest_safely = Resource.create(
   title: "How to Protest Safely",
   author: "Amnesty International",
   link: "https://www.amnestyusa.org/protests/",
-  category: "guide",
   description: "Everyone has the right to assemble and to peacefully protest. For years, activists have been calling for equality for Black lives and Black communities and broad reforms in our policing and criminal justice systems. From activists organizing in Ferguson to leaders like Colin Kaepernick showing their solidarity, calls for change have been resonating louder and louder with each life lost.")
 
-Resource.create(
+ijeoma_oluo = Resource.create(
   title: "So You Want To Talk About Race",
   author: "Ijeoma Oluo",
   link: "http://www.ijeomaoluo.com/writing",
-  category: "book",
   description: "In So You Want to Talk About Race, Ijeoma Oluo guides readers of all races through subjects ranging from intersectionality and affirmative action to “model minorities” in an attempt to make the seemingly impossible possible: honest conversations about race and racism, and how they infect almost every aspect of American life.")
+
+book = Category.create(content: "book")
+guide = Category.create(content: "guide")
+data = Category.create(content: "data")
+article = Category.create(content: "article")
+academic = Category.create(content: "academic")
+
+CategoryJoiner.create(resource_id: ijeoma_oluo.id, category_id: book.id)
+CategoryJoiner.create(resource_id: angela_davis.id, category_id: book.id)
+
+CategoryJoiner.create(resource_id: protest_safely.id, category_id: guide.id)
+
+CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: data.id)
+
+CategoryJoiner.create(resource_id: gabby.id, category_id: article.id)
+CategoryJoiner.create(resource_id: defense_of_looting.id, category_id: article.id)
+CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: academic.id)

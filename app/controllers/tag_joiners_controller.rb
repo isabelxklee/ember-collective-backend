@@ -2,19 +2,16 @@ class TagJoinersController < ApplicationController
   before_action :set_tag_joiner, only: [:show, :update, :destroy]
   skip_before_action :authorized
 
-  # GET /tag_joiners
   def index
     @tag_joiners = TagJoiner.all
 
     render json: @tag_joiners
   end
 
-  # GET /tag_joiners/1
   def show
     render json: @tag_joiner
   end
 
-  # POST /tag_joiners
   def create
     @tag_joiner = TagJoiner.new(tag_joiner_params)
 
@@ -25,7 +22,6 @@ class TagJoinersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /tag_joiners/1
   def update
     if @tag_joiner.update(tag_joiner_params)
       render json: @tag_joiner
@@ -34,18 +30,15 @@ class TagJoinersController < ApplicationController
     end
   end
 
-  # DELETE /tag_joiners/1
   def destroy
     @tag_joiner.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_tag_joiner
       @tag_joiner = TagJoiner.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def tag_joiner_params
       params.permit(:tag_id, :org_id)
     end

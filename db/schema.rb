@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 202006032213113) do
+ActiveRecord::Schema.define(version: 9) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "content"
+  end
 
   create_table "category_joiners", force: :cascade do |t|
     t.integer "resource_id"
@@ -24,9 +28,9 @@ ActiveRecord::Schema.define(version: 202006032213113) do
     t.integer "sender_id"
     t.integer "receiver_id"
     t.integer "amount"
+    t.integer "org_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "org_id"
   end
 
   create_table "nominations", force: :cascade do |t|
@@ -42,15 +46,7 @@ ActiveRecord::Schema.define(version: 202006032213113) do
     t.string "website"
     t.string "donation_link"
     t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "tagline"
-  end
-
-  create_table "places", force: :cascade do |t|
-    t.string "name"
-    t.decimal "latitude"
-    t.decimal "longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -60,20 +56,15 @@ ActiveRecord::Schema.define(version: 202006032213113) do
     t.string "author"
     t.string "description"
     t.string "link"
-    t.string "category"
   end
 
   create_table "tag_joiners", force: :cascade do |t|
     t.integer "tag_id"
     t.integer "org_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tags", force: :cascade do |t|
     t.string "content"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
