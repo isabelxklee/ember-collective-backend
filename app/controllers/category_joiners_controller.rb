@@ -1,4 +1,4 @@
-class CategoryJoinerController < ApplicationController
+class CategoryJoinersController < ApplicationController
   before_action :set_category_joiner, only: [:show, :update, :destroy]
   skip_before_action :authorized
 

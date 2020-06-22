@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :organizations
   resources :users
   resources :resources
+  resources :categories
+  resources :category_joiners
 
 end
