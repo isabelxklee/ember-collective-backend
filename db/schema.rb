@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 9) do
     t.string "author"
     t.string "description"
     t.string "link"
+    t.string "img_url"
   end
 
   create_table "tag_joiners", force: :cascade do |t|

@@ -39,6 +39,6 @@ class ResourcesController < ApplicationController
     end
 
     def resource_params
-      params.permit(:title, :author, :description, :link, :category)
+      params.permit(:title, :author, :description, :link, :category, :img_url)
     end
 end

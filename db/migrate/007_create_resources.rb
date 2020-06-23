@@ -5,6 +5,7 @@ class CreateResources < ActiveRecord::Migration[6.0]
       t.string :author
       t.string :description
       t.string :link
+      t.string :img_url
     end
   end
 end
