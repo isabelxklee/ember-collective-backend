@@ -55,11 +55,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def update
-  #   @user.update(email_address: params[:email_address])
-  #   render json: @user
-  # end
-
   def destroy
     @user.destroy
   end
