@@ -7,9 +7,14 @@ class User < ApplicationRecord
   has_many :receivers, class_name: 'DonationChallenge', foreign_key: :receiver_id
   has_many :senders, class_name: 'DonationChallenge', foreign_key: :sender_id
 
-  validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
-  # validates_format_of :username, :with => /^(?=.{1,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9_]+(?<![_.])$/i
+  validates :username, presence: true, uniqueness: true, length: { maximum: 20 }, on: :create
   validates :email_address, presence: true, uniqueness: true
   validates_format_of :email_address, :with => /([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/i
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, if: :password_changed?
+
+  # validates_format_of :username, :with => /^(?=.{1,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9_]+(?<![_.])$/i
+
+  def password_changed?
+    !password.blank?
+  end
 end

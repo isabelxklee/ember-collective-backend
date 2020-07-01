@@ -55,6 +55,11 @@ class UsersController < ApplicationController
     end
   end
 
+  # def update
+  #   @user.update(email_address: params[:email_address])
+  #   render json: @user
+  # end
+
   def destroy
     @user.destroy
   end
@@ -68,4 +73,5 @@ class UsersController < ApplicationController
   def user_params
     params.permit(:username, :email_address, :password, :password_confirmation)
   end
+
 end
