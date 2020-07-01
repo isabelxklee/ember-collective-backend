@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :senders, class_name: 'DonationChallenge', foreign_key: :sender_id
 
   validates :username, presence: true, uniqueness: true, length: { maximum: 20 }
+  # validates_format_of :username, :with => /^(?=.{1,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9_]+(?<![_.])$/i
   validates :email_address, presence: true, uniqueness: true
   validates_format_of :email_address, :with => /([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/i
   validates :password, presence: true, length: { minimum: 6 }

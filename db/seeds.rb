@@ -220,6 +220,20 @@ ijeoma_oluo = Resource.create(
   img_url: "https://www.hachettebookgroup.com/wp-content/uploads/2018/02/97815800567791.jpg?fit=450%2C675",
   description: "In So You Want to Talk About Race, Ijeoma Oluo guides readers of all races through subjects ranging from intersectionality and affirmative action to “model minorities” in an attempt to make the seemingly impossible possible: honest conversations about race and racism, and how they infect almost every aspect of American life.")
 
+alex_vitale = Resource.create(
+  title: "The End of Policing",
+  author: "Alex S. Vitale",
+  link: "https://www.versobooks.com/authors/1660-alex-s-vitale",
+  img_url: "https://cdn-ed.versobooks.com/images/000014/321/9781784782924-eee743ba813f726f0ef78c27fdea782c.jpg",
+  description: "This book attempts to spark public discussion by revealing the tainted origins of modern policing as a tool of social control. It shows how the expansion of police authority is inconsistent with community empowerment, social justice—even public safety. Drawing on groundbreaking research from across the world, and covering virtually every area in the increasingly broad range of police work, Alex Vitale demonstrates how law enforcement has come to exacerbate the very problems it is supposed to solve.")
+
+nk_jemisin = Resource.create(
+  title: "How Long 'til Black Future Month?",
+  author: "N. K. Jemisin",
+  link: "https://www.latimes.com/books/la-ca-jc-n-k-jemisin-20181128-story.html",
+  img_url: "https://prodimage.images-bn.com/pimages/9780316491372_p0_v2_s1200x630.jpg",
+  description: "Bestselling novelist N.K. Jemisin’s marvelous and wide-ranging debut story collection takes its title from her 2013 essay “How Long ’Til Black Future Month? The Toxins of Speculative Fiction, and the Antidote That is Janelle Monae.” It’s a sharp critique of the racist and sexist attitudes promulgated by predominantly white male speculative fiction writers, editors and readers from the genre’s so-called Golden Age until recently.")
+
 book = Category.create(content: "book")
 guide = Category.create(content: "guide")
 data = Category.create(content: "data")
@@ -232,6 +246,8 @@ protest = Category.create(content: "protest")
 
 CategoryJoiner.create(resource_id: ijeoma_oluo.id, category_id: book.id)
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: book.id)
+CategoryJoiner.create(resource_id: alex_vitale.id, category_id: book.id)
+CategoryJoiner.create(resource_id: nk_jemisin.id, category_id: book.id)
 
 CategoryJoiner.create(resource_id: protest_safely.id, category_id: guide.id)
 
@@ -239,10 +255,13 @@ CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: data
 
 CategoryJoiner.create(resource_id: gabby.id, category_id: article.id)
 CategoryJoiner.create(resource_id: defense_of_looting.id, category_id: article.id)
+
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: academic.id)
+CategoryJoiner.create(resource_id: alex_vitale.id, category_id: academic.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: police_brutality.id)
+CategoryJoiner.create(resource_id: alex_vitale.id, category_id: police_brutality.id)
 
 CategoryJoiner.create(resource_id: gabby.id, category_id: queer.id)
 

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorized, only: [:stay_logged_in, :show, :update, :destroy]
+  before_action :authorized, only: [:stay_logged_in, :show, :destroy]
   before_action :set_user, only: [:show, :edit, :update]
 
   def index
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    if @user.update(user_params())
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
