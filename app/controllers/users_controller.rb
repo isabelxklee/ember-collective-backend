@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authorized, only: [:stay_logged_in, :show, :destroy]
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :authorized, only: [:stay_logged_in, :show]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all
@@ -57,6 +57,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
+    render json: {message: "Successfully deleted account."}
   end
  
   private
