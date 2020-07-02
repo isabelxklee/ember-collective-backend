@@ -8,8 +8,9 @@ Resource.destroy_all
 Category.destroy_all
 CategoryJoiner.destroy_all
 
-isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123")
+isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123", created_at: "2020-06-30 17:13:12")
 frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123", created_at: "2020-05-17 17:13:12")
+giraffe = User.create(username: "giraffe", email_address: "giraffe@gmail.com", password: "abc123", created_at: "2020-07-01 17:13:12")
 
 bvc = Organization.create(
   name: "Black Visions Collective",

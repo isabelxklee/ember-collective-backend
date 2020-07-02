@@ -1,5 +1,5 @@
 class DonationChallengesController < ApplicationController
-  before_action :authorized, only: [:show, :update, :destroy]
+  before_action :authorized, only: [:show, :update]
   before_action :set_donation_challenge, only: [:show, :update, :destroy]
 
   def index
@@ -30,6 +30,7 @@ class DonationChallengesController < ApplicationController
 
   def destroy
     @donation_challenge.destroy
+    render json: {message: "Your account was successfully deleted."}
   end
 
   private
