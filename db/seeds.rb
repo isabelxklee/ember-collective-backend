@@ -177,7 +177,6 @@ michelle_jacobs = Resource.create(
   title: "The Violent State: Black Women's Invisible Struggle Against Police Violence",
   author: "Michelle S. Jacobs",
   link: "https://scholarship.law.wm.edu/cgi/viewcontent.cgi?article=1462&context=wmjowl",
-  # img_url: "https://www.law.ufl.edu/law/wp-content/uploads/2015/10/jacobs-michelle.jpg",
   description: "The theme of this special issue, Women and Law Enforcement, is particularly timely. Incidents of police brutality have reached a new level of public visibility. Though not everyone agrees on whether the use of violence by the police is inappropriate, conversations about police violence are occurring everywhere. An exploration of the topic of Women and Law Enforcement would not be complete without at least one article that puts Black women at the center of the lens of analysis, particularly as it relates to the state-sponsored violence Black women experience at the hands of law enforcement. This Article is about law enforcement’s violence towards Black women specifically. The reader should not feel free to substitute the phrase “women of color” where “Black women” has been written.")
 
 gabby = Resource.create(
@@ -191,8 +190,8 @@ defense_of_looting = Resource.create(
   title: "In Defense of Looting",
   author: "Vicky Osterweil",
   link: "https://thenewinquiry.com/in-defense-of-looting/",
-  img_url: "https://cdn.shopify.com/s/files/1/0265/3105/files/tnilogosquare_450x.jpg?v=1517275228",
-  description: "For most of America’s history, one of the most righteous anti-white supremacist tactics available was looting.")
+  img_url: "https://thenewinquiry.com/app/uploads/2014/08/ot-383.jpg",
+  description: "As protests in Ferguson continued unabated one week after the police killing of Michael Brown, Jr., zones of Twitter and the left media predominantly sympathetic to the protesters began angrily criticizing looters. Some claimed that white protesters were the ones doing all of the looting and property destruction, while others worried about the stereotypical and damaging media representation that would emerge. It also seems that there were as many protesters (if not more) in the streets of Ferguson working to prevent looting as there were people going about it. While I disagree with this tactic, I understand that they acted out of care for the struggle, and I want to honor all the brave and inspiring actions they’ve taken over the last weeks.")
 
 mapping_police_violence = Resource.create(
   title: "Mapping Police Violence",
@@ -235,6 +234,75 @@ nk_jemisin = Resource.create(
   img_url: "https://prodimage.images-bn.com/pimages/9780316491372_p0_v2_s1200x630.jpg",
   description: "Bestselling novelist N.K. Jemisin’s marvelous and wide-ranging debut story collection takes its title from her 2013 essay “How Long ’Til Black Future Month? The Toxins of Speculative Fiction, and the Antidote That is Janelle Monae.” It’s a sharp critique of the racist and sexist attitudes promulgated by predominantly white male speculative fiction writers, editors and readers from the genre’s so-called Golden Age until recently.")
 
+crown_act = Resource.create(
+  title: "'Wear your crown, because change is coming': Virginia joins states banning hair discrimination",
+  author: "Kenya Evelyn",
+  link: "https://www.theguardian.com/us-news/2020/jul/01/virginia-crown-act-black-hair-law-bill",
+  img_url: "https://i.guim.co.uk/img/media/be4167bcfe8e93562a784a9c9e6a53059a1092ed/0_181_6674_4448/master/6674.jpg?width=1920&quality=85&auto=format&fit=max&s=2d871a119099b417bd20cf14ff88f926",
+  description: "Virginia became the fourth US state, and the first in the south, to pass legislation banning hair discrimination based on racial identifiers including hair texture and hair type, as well as “protective hairstyles such as braids, [locs] and twists”. The law, known as the Crown Act, goes into effect on Wednesday.")
+
+hair_nah = Resource.create(
+  title: "This Artist Made A Game For Black Women Who Are Tired Of People Touching Their Hair",
+  author: "Taryn Finley",
+  link: "https://www.huffpost.com/entry/black-woman-hair-video-game-momo-pixel_n_5a130082e4b0bfa88c1bd5dd",
+  img_url: "https://pbs.twimg.com/media/DOt4ucdUQAACwJn?format=jpg&name=medium",
+  description: "Wieden+Kennedy art director Momo Pixel wanted to express the frustration that she and other black women share when others invade their space. So she made Hair Nah!, an 8-bit game with a simple task: swat pesky hands away from protagonist Aeva’s hair as she makes her way to her final destination.")
+
+bipoc = Resource.create(
+  title: "Why the term “BIPOC” is so complicated, explained by linguists",
+  author: "Constance Grady",
+  link: "https://www.vox.com/2020/6/30/21300294/bipoc-what-does-it-mean-critical-race-linguistics-jonathan-rosa-deandra-miles-hercules",
+  img_url: "https://cdn.vox-cdn.com/thumbor/AdCTFMiDAogyYS9t-uZR-L9G4l8=/0x0:3648x2432/3070x1727/filters:focal(1643x1152:2225x1734)/cdn.vox-cdn.com/uploads/chorus_image/image/66999455/GettyImages_1220229162.0.jpg",
+  description: "This summer, a debate is looming over the words we use when we talk about the people who are disproportionately the victims of police brutality. When do we use the phrase “people of color”; when do we say “BIPOC,” which stands for Black and Indigenous people of color; and when do we just say “Black”?")
+
+viral_death = Resource.create(
+  title: "The viral video of Ahmaud Arbery’s killing shows whose deaths we afford privacy and whose we don’t",
+  author: "Sarah Sentilles",
+  link: "https://www.vox.com/first-person/2020/5/11/21254482/ahmaud-arbery-video-police-killing-racism",
+  img_url: "https://cdn.vox-cdn.com/thumbor/_7fK5Kl0DPA04pJ_CS-3Y1reAM4=/0x0:5923x3949/1720x0/filters:focal(0x0:5923x3949):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19958222/GettyImages_1212203640.jpg",
+  description: "As someone who has been studying images of violence for 15 years, this is what I’ve learned: Images — both those we see and those blocked from our view — send messages about whose lives count, about whose lives should be mourned, about who belongs to us and who doesn’t. And those messages are shaped by racism.")
+
+beauty_colorism = Resource.create(
+  title: "Beauty companies are changing skin-whitening products. But the damage of colorism runs deeper.",
+  author: "Rachel Ramirez",
+  link: "https://www.vox.com/first-person/2020/6/30/21308257/skin-lightening-colorism-whitening-bleaching",
+  img_url: "https://cdn.vox-cdn.com/thumbor/0uiyPrGcQq0TLKGlNEbxl82DE8s=/0x0:3400x2266/1820x1213/filters:focal(878x1072:1422x1616)/cdn.vox-cdn.com/uploads/chorus_image/image/67000974/GettyImages_167784755.0.jpg",
+  description: "Colorism — a form of prejudice that places a higher value on people with lighter color skin — differs from racism because discrimination commonly occurs within, rather than between, racial groups. Historically, darker skin has been deemed undesirable and equated with being poor in many cultures due to Western colonialism and exposure to Eurocentric wealth and beauty. As a result, the beauty industry has long played into these insecurities for profit, perpetuating the cultural cycle.")
+
+womens_media = Resource.create(
+  title: "The racial reckoning in women’s media",
+  author: "Rebecca Jennings",
+  link: "https://www.vox.com/the-goods/21287045/refinery29-black-employees-man-repeller-cosmopolitan-who-what-wear-vogue",
+  img_url: "https://cdn.vox-cdn.com/thumbor/UxaYK9qTDQFs3BmslVPmzFlw1o4=/0x0:4449x3337/3070x1727/filters:focal(1870x1314:2580x2024)/cdn.vox-cdn.com/uploads/chorus_image/image/66921922/GettyImages_1006534216.0.jpg",
+  description: "What’s happening in women’s media right now, along with so many other industries, is a racial reckoning. Over the past week, publications like Refinery29, Man Repeller, Who What Wear, Cosmopolitan, and Vogue have published articles like “Anti-Racist Actions You Can Take Today” and “A List of Resources for Supporting the Black Lives Matter Movement.” Behind the social justice articles and allyship guides, however, employees have shared stories that recall the far less progressive earlier days of women’s magazines, the ones that were supposed to have fallen out of trend years ago.")
+
+public_opinion = Resource.create(
+  title: "These protests feel different because they’re shifting public opinion",
+  author: "Fabiola Cineas ",
+  link: "https://www.vox.com/2020/6/26/21301066/public-opinion-shift-black-lives-matter",
+  img_url: "https://cdn.vox-cdn.com/thumbor/kmW-8bgcAbhi9FH1069FaVn4n-E=/0x0:4245x2830/3070x1727/filters:focal(1485x610:2163x1288)/cdn.vox-cdn.com/uploads/chorus_image/image/66985512/GettyImages_1251568759.0.jpg",
+  description: "Megan Ming Francis, a political science professor at the University of Washington and a visiting professor at Harvard University, told Vox that there are a few things activists and allies must do to achieve even greater wins through November and in the coming years. These steps involve public education and a greater recognition of how protest shifts public opinion. “Protest is key,” she said, but the movement can’t end in the street.")
+
+black_owned_bk = Resource.create(
+  title: "Black-Owned Brooklyn",
+  link: "https://www.blackownedbrooklyn.com",
+  img_url: "https://pbs.twimg.com/profile_images/966355336004362240/OkCyr3nJ.jpg",
+  description: "Black-Owned Brooklyn makes it easier for you to discover local Black-owned businesses, in addition to documenting Black life, past and present, in the borough. We seek to lift up and preserve rich stories that are often overlooked in gentrified Brooklyn and encourage you to learn more about — and participate in — the creativity, beauty and self-determination throughout our community.")
+
+black_slang = Resource.create(
+  title: "Fake-Ass Muhfuckas: Verbal Blackface and The Mis-Appropriation of Black Slang by Pop Culture",
+  author: "Levi Clum",
+  link: "https://www.culturalconsent.com/home/verbal-blackface",
+  img_url: "https://static1.squarespace.com/static/5bfde5df3917ee0986cca09f/5e5a9f60d344ff762e236ca1/5d191b70f5cd4800019b1181/1583104378848/?format=2500w",
+  description: "Within any culture, language functions as the basis for communicating ideas and people’s general sense of belonging. It is the ways that we practice language that differentiate us from one group to another. Just like accents connote where one comes from, so too do the words and slang that we practice in everyday speech. In today’s pop culture, black slang has become the social capital for differentiating who is socially “in” and who is “out.” Words like “woke,” “rachet,” “twerk,” and “basic” have become common sayings that are often misused or overly emphasized in order for people to feel cool or aware. But these words, while seemingly accepted by society today, mark a key misstep in how white America perceives itself in relation to the continued marginalization of the black communities of the US. In many ways, the use of black slang is a marker of the continued commodification of black art and culture that is used to legitimize and benefit the white majority.")
+
+black_panther = Resource.create(
+  title: "27 Important Facts Everyone Should Know About The Black Panthers",
+  author: "Lilly Workneh and Taryn Finley",
+  link: "https://www.huffpost.com/entry/27-important-facts-everyone-should-know-about-the-black-panthers_n_56c4d853e4b08ffac1276462",
+  img_url: "https://img.huffingtonpost.com/asset/56c5ef9d1900002a00377e95.jpeg?ops=scalefit_600_noupscale",
+  description: "The Black Panther Party was founded 50 years ago ― and still, many misconceptions about its revolutionary work run rampant. “The Black Panthers: Vanguard of the Revolution,” a documentary by Stanley Nelson which aired on PBS Tuesday, shined a necessary light on the contributions, convictions and struggles of members in the party. Nelson’s informative film took a deep dive into discussing the truth behind the Black Panthers and underscored the heavy institutional backlash the liberation movement received from police and the government. From the group’s radical inception in 1966 to it’s dissolve in 1982, here are a few important things you must know to better understand the Black Panthers.")
+
 book = Category.create(content: "book")
 guide = Category.create(content: "guide")
 data = Category.create(content: "data")
@@ -244,6 +312,9 @@ police_brutality = Category.create(content: "police brutality")
 queer = Category.create(content: "queer")
 prison_abolition = Category.create(content: "prison abolition")
 protest = Category.create(content: "protest")
+culture = Category.create(content: "culture")
+game = Category.create(content: "game")
+community = Category.create(content: "community")
 
 CategoryJoiner.create(resource_id: ijeoma_oluo.id, category_id: book.id)
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: book.id)
@@ -256,6 +327,14 @@ CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: data
 
 CategoryJoiner.create(resource_id: gabby.id, category_id: article.id)
 CategoryJoiner.create(resource_id: defense_of_looting.id, category_id: article.id)
+CategoryJoiner.create(resource_id: crown_act.id, category_id: article.id)
+CategoryJoiner.create(resource_id: bipoc.id, category_id: article.id)
+CategoryJoiner.create(resource_id: viral_death.id, category_id: article.id)
+CategoryJoiner.create(resource_id: beauty_colorism.id, category_id: article.id)
+CategoryJoiner.create(resource_id: womens_media.id, category_id: article.id)
+CategoryJoiner.create(resource_id: public_opinion.id, category_id: article.id)
+CategoryJoiner.create(resource_id: black_slang.id, category_id: article.id)
+CategoryJoiner.create(resource_id: black_panther.id, category_id: article.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: academic.id)
 CategoryJoiner.create(resource_id: alex_vitale.id, category_id: academic.id)
@@ -263,9 +342,22 @@ CategoryJoiner.create(resource_id: alex_vitale.id, category_id: academic.id)
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: alex_vitale.id, category_id: police_brutality.id)
+CategoryJoiner.create(resource_id: viral_death.id, category_id: police_brutality.id)
 
 CategoryJoiner.create(resource_id: gabby.id, category_id: queer.id)
 
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: prison_abolition.id)
 
 CategoryJoiner.create(resource_id: protest_safely.id, category_id: protest.id)
+CategoryJoiner.create(resource_id: public_opinion.id, category_id: protest.id)
+
+CategoryJoiner.create(resource_id: crown_act.id, category_id: culture.id)
+CategoryJoiner.create(resource_id: hair_nah.id, category_id: culture.id)
+CategoryJoiner.create(resource_id: bipoc.id, category_id: culture.id)
+CategoryJoiner.create(resource_id: beauty_colorism.id, category_id: culture.id)
+CategoryJoiner.create(resource_id: womens_media.id, category_id: culture.id)
+CategoryJoiner.create(resource_id: black_slang.id, category_id: culture.id)
+
+CategoryJoiner.create(resource_id: hair_nah.id, category_id: game.id)
+
+CategoryJoiner.create(resource_id: black_owned_bk.id, category_id: community.id)
