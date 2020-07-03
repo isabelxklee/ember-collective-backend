@@ -173,6 +173,13 @@ TagJoiner.create(tag_id: tag_queer.id, org_id: trans_justice.id)
 TagJoiner.create(tag_id: tag_trans.id, org_id: trans_justice.id)
 TagJoiner.create(tag_id: tag_community.id, org_id: trans_justice.id)
 
+dimensions = Resource.create(
+  title: "Dimensions of Racism",
+  author: "Office of the United Nations High Commissioner for Human Rights (OHCHR) and United Nations Educational, Scientific and Cultural Organization (UNESCO)",
+  link: "https://www.ohchr.org/Documents/Publications/DimensionsRacismen.pdf",
+  img_url: "https://imgv2-2-f.scribdassets.com/img/document/137051375/original/fda0499b1e/1588052444?v=1",
+  description: "The papers published in this volume were presented at a workshop entitled “Dimensions of racism”, organized by the Office of the United Nations High Commissioner for Human Rights (OHCHR), in cooperation with the United Nations Educational, Scientific and Cultural Organization (UNESCO), on 19-20 February 2003.")
+
 michelle_jacobs = Resource.create(
   title: "The Violent State: Black Women's Invisible Struggle Against Police Violence",
   author: "Michelle S. Jacobs",
@@ -303,6 +310,13 @@ black_panther = Resource.create(
   img_url: "https://img.huffingtonpost.com/asset/56c5ef9d1900002a00377e95.jpeg?ops=scalefit_600_noupscale",
   description: "The Black Panther Party was founded 50 years ago ― and still, many misconceptions about its revolutionary work run rampant. “The Black Panthers: Vanguard of the Revolution,” a documentary by Stanley Nelson which aired on PBS Tuesday, shined a necessary light on the contributions, convictions and struggles of members in the party. Nelson’s informative film took a deep dive into discussing the truth behind the Black Panthers and underscored the heavy institutional backlash the liberation movement received from police and the government. From the group’s radical inception in 1966 to it’s dissolve in 1982, here are a few important things you must know to better understand the Black Panthers.")
 
+medicine_racism = Resource.create(
+  title: "Racism In Medicine Isn't An Abstract Notion. It's Happening All Around Us, Every Day",
+  author: "Ayotomiwa Ojo",
+  link: "https://www.wbur.org/cognoscenti/2020/06/12/anti-racism-in-medicine-hospitals-ayotomiwa-ojo",
+  img_url: "https://d279m997dpfwgl.cloudfront.net/wp/2020/06/0605_mgh-kneel-in04-1000x667.jpg",
+  description: "Racism is part of my daily experience, even as a medical student rotating through the teaching hospitals of Harvard Medical School. The health care system is one sector within the larger framework of white supremacy embedded in American society. While the medical community accepts how the social determinants of health contribute to disparities, we hesitate to address how structural and interpersonal racism shorten Black people’s lives. Medicine has yet to actively become anti-racist.")
+
 book = Category.create(content: "book")
 guide = Category.create(content: "guide")
 data = Category.create(content: "data")
@@ -335,9 +349,11 @@ CategoryJoiner.create(resource_id: womens_media.id, category_id: article.id)
 CategoryJoiner.create(resource_id: public_opinion.id, category_id: article.id)
 CategoryJoiner.create(resource_id: black_slang.id, category_id: article.id)
 CategoryJoiner.create(resource_id: black_panther.id, category_id: article.id)
+CategoryJoiner.create(resource_id: medicine_racism.id, category_id: article.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: academic.id)
 CategoryJoiner.create(resource_id: alex_vitale.id, category_id: academic.id)
+CategoryJoiner.create(resource_id: dimensions.id, category_id: academic.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: police_brutality.id)
