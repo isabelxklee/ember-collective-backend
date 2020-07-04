@@ -1,10 +1,10 @@
 User.destroy_all
 Organization.destroy_all
+Resource.destroy_all
 Nomination.destroy_all
 DonationChallenge.destroy_all
 Tag.destroy_all
 TagJoiner.destroy_all
-Resource.destroy_all
 Category.destroy_all
 CategoryJoiner.destroy_all
 
@@ -14,7 +14,7 @@ giraffe = User.create(username: "giraffe", email_address: "giraffe@gmail.com", p
 
 bvc = Organization.create(
   name: "Black Visions Collective",
-  location: "Minnesota",
+  location: "Twin Cities region, Minnesota",
   website: "https://www.blackvisionsmn.org",
   donation_link: "https://secure.everyaction.com/4omQDAR0oUiUagTu0EG-Ig2",
   tagline: "We aim to center our work in healing and transformative justice principles, intentionally develop our organizations core “DNA” to ensure sustainability, and develop Minnesota’s emerging Black leadership to lead powerful campaigns.",
@@ -34,6 +34,9 @@ bail_project = Organization.create(
   name: "The Bail Project",
   location: "U.S.A.",
   website: "https://bailproject.org",
+  twitter: "https://twitter.com/bailproject",
+  facebook: "https://www.facebook.com/bailproject/",
+  instagram: "https://www.instagram.com/bailproject/",
   donation_link: "https://secure.givelively.org/donate/the-bail-project",
   tagline: "The Bail Project, Inc. is a non-profit organization designed to combat mass incarceration by disrupting the money bail system ‒ one person at a time.",
   description: "The Bail Project, Inc. is a non-profit organization designed to combat mass incarceration by disrupting the money bail system ‒ one person at a time. We believe that paying bail for someone in need is an act of resistance against a system that criminalizes race and poverty and an act of solidarity with local communities and movements for decarceration. Over the next five years, The Bail Project will open dozens of sites in high-need jurisdictions with the goal of paying bail for tens of thousands of low-income Americans, all while collecting stories and data that prove money bail is not necessary to ensure people return to court. We won’t stop until meaningful change is achieved and the presumption of innocence is no longer for sale."
@@ -43,6 +46,9 @@ ny_immigrant = Organization.create(
   name: "New York Immigrant Freedom Fund",
   location: "Brooklyn, New York",
   website: "https://nyimmigrantfreedom.org",
+  twitter: "https://twitter.com/BKBailFund",
+  instagram: "https://www.instagram.com/brooklynbailfund/",
+  facebook: "https://www.facebook.com/brooklynbailfund/",
   donation_link: "https://nyimmigrantfreedom.org/donate/",
   tagline: "The New York Immigrant Freedom Fund – a program of the Brooklyn Community Bail Fund – pays immigration bonds for community members who are unable to afford it.",
   description: "The New York Immigrant Freedom Fund – a program of the Brooklyn Community Bail Fund – pays immigration bonds for community members who are unable to afford it. By paying bond, we are reuniting New Yorkers with their families and radically improving their chances of winning their immigration cases. Working in close partnership with community-based organizations, we are committed to building power in immigrant communities as we fight to end immigration detention. Our partners include African Communities Together, Black Alliance for Just Immigration, Families for Freedom, Immigrant Defense Project, Make the Road NY, and Surveillance Technology Oversight Project."
@@ -52,6 +58,7 @@ cje = Organization.create(
   name: "Community Justice Exchange",
   location: "U.S.A.",
   website: "https://www.communityjusticeexchange.org/nbfn-directory",
+  facebook: "https://www.facebook.com/bailfundnetwork/",
   donation_link: "https://www.communityjusticeexchange.org/nbfn-directory",
   tagline: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention.",
   description: "The Community Justice Exchange develops, shares and experiments with tactical interventions, strategic organizing practices, and innovative organizing tools to end all forms of criminalization, incarceration, surveillance, supervision, and detention. We provide support to community-based organizations across the country that are experimenting with bottom-up interventions that contest the current operation and function of the criminal legal and immigration detention systems.  CJE produces tools and resources for organizers using community justice tactics to creatively tackle multiple drivers of criminalization and incarceration— including, but not limited to, money bail, court fees and fines, probation and parole, pretrial detention & supervision, and immigration detention & supervision. The Community Justice Exchange is also the host of the National Bail Fund Network, a formation of over sixty community-led bail and bond funds that are part of campaigns to end pretrial and immigration detention."
@@ -61,6 +68,9 @@ kyrc = Organization.create(
   name: "Know Your Rights Camp",
   location: "U.S.A.",
   website: "https://www.knowyourrightscamp.com",
+  twitter: "https://twitter.com/yourrightscamp",
+  facebook: "https://www.facebook.com/yourrightscamp/",
+  instagram: "https://www.instagram.com/yourrightscamp/",
   donation_link: "https://secure.eifoundation.org/site/Donation2?df_id=6082&mfc_pref=T&6082.donation=form1&s_src=kyrcmain&utm_source=kyrcmain",
   tagline: "A free campaign for youth to raise awareness on higher education, self empowerment, and interacting with law enforcement.",
   description: "Our mission is to advance the liberation and well-being of Black and Brown communities through education, self-empowerment, mass-mobilization and the creation of new systems that elevate the next generation of change leaders."
@@ -70,6 +80,9 @@ trans_law_center = Organization.create(
   name: "Transgender Law Center",
   location: "Oakland, California",
   website: "https://transgenderlawcenter.org",
+  twitter: "https://twitter.com/TransLawCenter",
+  facebook: "https://www.facebook.com/translawcenter",
+  instagram: "https://www.instagram.com/translawcenter/",
   donation_link: "https://transgenderlawcenter.org/donate",
   tagline: "Transgender Law Center (TLC) is the largest national trans-led organization advocating for a world in which all people are free to define themselves and their futures.",
   description: "Founded in 2002, Transgender Law Center (TLC) has grown into the largest trans-specific, trans-led organization in the United States. Our advocacy and precedent-setting litigation victories—in areas including employment, prison conditions, education, immigration, and healthcare—protect and advance the rights of transgender and gender nonconforming people across the country. Through our organizing and movement-building programs, TLC assists, informs, and empowers thousands of individual community members a year and builds towards a long-term, national, trans-led movement for liberation."
@@ -79,6 +92,9 @@ no_new_jails = Organization.create(
   name: "No New Jails NYC",
   location: "Brooklyn, New York",
   website: "https://www.nonewjails.nyc",
+  twitter: "https://twitter.com/nonewjails_nyc",
+  facebook: "https://www.facebook.com/nonewjailsnyc",
+  instagram: "https://www.instagram.com/nonewjails_nyc/",
   donation_link: "https://www.paypal.me/nonewjailsnyc",
   tagline: "Our plan is an open door for community and political stakeholders to join us in envisioning abolition in NYC, by divesting from police and prisons, and investing in community.",
   description: "Without your input, the City developed a $10.6 billion scheme to build four new jails without any binding commitment to close Rikers Island. No New Jails NYC formed to ensure that Rikers Island closes immediately without the construction of new jails. We believe that the people of New York City, especially those targeted for incarceration, are against any plan to build new jails, where all the horrors of Rikers will be re-enacted, simply at new addresses with fresh coats of paint."
@@ -88,6 +104,9 @@ integrate_nyc = Organization.create(
   name: "IntegrateNYC",
   location: "Brooklyn, New York",
   website: "https://www.integratenyc.org/home/#introduction",
+  twitter: "https://twitter.com/integratenyc",
+  instagram: "https://www.instagram.com/integratenyc/",
+  facebook: "https://www.facebook.com/integratenyc",
   donation_link: "https://secure.givelively.org/donate/integratenyc-inc/1-1-million-dollars-for-1-1-million-students",
   tagline: "IntegrateNYC is a youth-led organization that stands for integration and equity in New York City schools.",
   description: "We, the students, are the best experts on the impacts of this segregation and inequality. At IntegrateNYC, we are also designers of solutions, advocates for transformative policy, and visionaries for a more just future. We have learned from the past, and we do not want to stop at desegregation. True, meaningful integration requires a transformation in our school system that centers students and communities of color. We have developed and are advocating for 5Rs of Real Integration to create lasting, revolutionary change in our school system. We also stand for Real Representation of young people in decision making at local, city, state, and federal levels."
@@ -97,6 +116,9 @@ okra_project = Organization.create(
   name: "The Okra Project",
   location: "Brooklyn, New York",
   website: "https://www.theokraproject.com",
+  twitter: "https://twitter.com/TheOkraProject",
+  facebook: "https://www.facebook.com/The-Okra-Project-882988962034764/",
+  instagram: "https://www.instagram.com/theokraproject/",
   donation_link: "https://secure.givelively.org/donate/integratenyc-inc/1-1-million-dollars-for-1-1-million-students",
   tagline: "The Okra Project is a collective that seeks to address the global crisis faced by Black Trans people by bringing home cooked, healthy, and culturally specific meals and resources to Black Trans People wherever we can reach them.",
   description: "Based on individual donations, The Okra Project pays Black Trans chefs to go into the homes of Black Trans people to cook them a healthy and home-cooked meal at absolutely no cost to our Black TGNC siblings. For those Black Trans folks currently experiencing homeless or whose homes cannot support our chef’s cooking, The Okra Project has partnered with institutions like Osborne Association and other community spaces to deliver foods."
@@ -106,6 +128,8 @@ trans_justice = Organization.create(
   name: "Trans Justice Funding Project",
   location: "U.S.A.",
   website: "https://www.transjusticefundingproject.org",
+  facebook: "https://www.facebook.com/TransJusticeFundingProject",
+  twitter: "https://twitter.com/TransJusticeFP",
   donation_link: "https://connect.clickandpledge.com/w/Form/fcd63e3f-e625-4589-a7b7-ac6c92ce3406",
   tagline: "The Trans Justice Funding Project is a community-led funding initiative founded in 2012 to support grassroots, trans justice groups run by and for trans people.",
   description: "The Trans Justice Funding Project is a community-led funding initiative founded in 2012 to support grassroots, trans justice groups run by and for trans people. We make grants annually by bringing together a panel of six trans justice activists from around the country to carefully review every application we receive. We center the leadership of trans people organizing around their experiences with racism, economic injustice, transmisogyny, ableism, immigration, incarceration, and other intersecting oppressions. Every penny we raise goes to our grantees with no restrictions and no strings attached because we truly believe in trans leadership."
@@ -115,11 +139,24 @@ loveland = Organization.create(
   name: "Loveland Foundation",
   location: "Ohio",
   website: "https://thelovelandfoundation.org",
+  facebook: "https://www.facebook.com/TheLovelandFoundation/",
+  instagram: "https://www.instagram.com/thelovelandfoundation/?hl=en",
   donation_link: "https://www.flipcause.com/secure/team_fundraiser/NzU4MzM=/6860",
-  tagline: "Loveland Foundation is committed to showing up for communities of color in unique and powerful ways, with a particular focus on Black women and girls. Our resources and initiatives are collaborative and they prioritize opportunity, access, validation, and healing.",
+  tagline: "Loveland Foundation is committed to showing up for communities of color in unique and powerful ways, with a particular focus on Black women and girls.",
   description: "The Loveland Foundation was established in 2018 by Rachel Cargle in response to her widely successful birthday wish fundraiser, Therapy for Black Women and Girls. Her enthusiastic social media community raised over $250,000, which made it possible for Black women and girls nationally to receive therapy support. Black women and girls deserve access to healing, and that healing will impact generations.
 
   The Loveland Foundation is the official continuation of this effort to bring opportunity and healing to communities of color, and especially to Black women and girls. Through fellowships, residency programs, listening tours, and more, ultimately we hope to contribute to both the empowerment and the liberation of the communities we serve."
+  )
+
+cuapb = Organization.create(
+  name: "Communities United Against Police Brutality",
+  location: "Twin Cities region, Minnesota",
+  website: "https://www.cuapb.org",
+  twitter: "https://twitter.com/CUAPBMpls",
+  facebook: "https://www.facebook.com/cuapb.org/",
+  donation_link: "https://www.paypal.com/donate/?token=wgEp4HknF9mIhyS4WYhGD270NHGPfoqEq89-8jira9BDjgPBJHh5muiVRlPPyYApWEYNeW&fromUL=true&country.x=US&locale.x=en_US",
+  tagline: "Communities United Against Police BrutalityTM is a Twin-Cities based organization that was created to deal with police brutality on an ongoing basis.",
+  description: "CUAPB is an all-volunteer organization that was formed in December 2000 in the aftermath of the shooting death of Charles 'Abuka' Sanders by Minneapolis police. As we worked to try to achieve justice for Abuka's family, we came to the realization that while many people respond in powerful ways to brutal police killings and other egregious incidents, handling each case separately is not an effective way to deal with police brutality. Reinventing the wheel with each new case is reactive, not proactive, and almost assures there will be more cases. It was time to form an organization to take on police brutality 24/7/365 and to work on day-to-day abuses with the idea that taking them on could reduce the number of more serious incidents. In mid-December 2000, CUAPB held its first meeting on a Saturday at Hosmer Library in Minneapolis."
   )
 
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
@@ -139,6 +176,8 @@ tag_prison = Tag.create(content: "prison-abolition")
 tag_legal = Tag.create(content: "legal")
 tag_food = Tag.create(content: "food")
 tag_community = Tag.create(content: "community")
+tag_mental_health = Tag.create(content: "mental-health")
+tag_police_brutality = Tag.create(content: "police-brutality")
 
 TagJoiner.create(tag_id: tag_bail_fund.id, org_id: bail_project.id)
 
@@ -172,6 +211,12 @@ TagJoiner.create(tag_id: tag_community.id, org_id: bvc.id)
 TagJoiner.create(tag_id: tag_queer.id, org_id: trans_justice.id)
 TagJoiner.create(tag_id: tag_trans.id, org_id: trans_justice.id)
 TagJoiner.create(tag_id: tag_community.id, org_id: trans_justice.id)
+
+TagJoiner.create(tag_id: tag_community.id, org_id: loveland.id)
+TagJoiner.create(tag_id: tag_mental_health.id, org_id: loveland.id)
+
+TagJoiner.create(tag_id: tag_community.id, org_id: cuapb.id)
+TagJoiner.create(tag_id: tag_police_brutality.id, org_id: cuapb.id)
 
 dimensions = Resource.create(
   title: "Dimensions of Racism",

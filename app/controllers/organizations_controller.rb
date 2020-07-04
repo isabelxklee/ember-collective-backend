@@ -40,6 +40,6 @@ class OrganizationsController < ApplicationController
     end
 
     def org_params
-      params.permit(:name, :location, :website, :donation_link, :description, :tagline)
+      params.permit(:name, :location, :website, :donation_link, :description, :tagline, :twitter, :facebook, :instagram)
     end
 end
