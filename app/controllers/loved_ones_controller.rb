@@ -39,6 +39,6 @@ class LovedOnesController < ApplicationController
     end
 
     def loved_one_params
-      params.permit(:name, :img_url, :story, :dates, :link)
+      params.permit(:name, :img_url, :story, :date, :link, :button_label)
     end
 end

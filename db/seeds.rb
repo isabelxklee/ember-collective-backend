@@ -539,10 +539,11 @@ CategoryJoiner.create(resource_id: jail_media.id, category_id: incarceration.id)
 
 LovedOne.create(
   name: "Breonna Taylor",
-  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. “She was an essential worker. She had to go to work,” her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic. “She didn’t have a problem with that.” Breonna survived the frontlines of a pandemic that disproportionately kills Black people, only to have her life stolen by police.
-  
-  On the night of March 13th, the Louisville Metro Police executed a warrant, looking for drugs they never found, reportedly trafficked by a person who did not live with Breonna or in her complex-and whom they already had in custody. They sprayed her home with 20 rounds, shooting Breonna 8 times, killing her in her bed.",
+  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. “She was an essential worker. She had to go to work,” her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic. “She didn’t have a problem with that.” Breonna survived the frontlines of a pandemic that disproportionately kills Black people, only to have her life stolen by police.",
   img_url: "https://nypost.com/wp-content/uploads/sites/2/2020/07/breonna-taylor-61.jpg?quality=80&strip=all",
   link: "https://justiceforbreonna.org",
-  dates: "March 13, 2020",
+  date: "March 13, 2020",
+  button_label: "Justice for Breonna"
   )
+
+  #   On the night of March 13th, the Louisville Metro Police executed a warrant, looking for drugs they never found, reportedly trafficked by a person who did not live with Breonna or in her complex-and whom they already had in custody. They sprayed her home with 20 rounds, shooting Breonna 8 times, killing her in her bed."

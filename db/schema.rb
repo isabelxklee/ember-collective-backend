@@ -37,8 +37,9 @@ ActiveRecord::Schema.define(version: 11) do
     t.string "name"
     t.string "img_url"
     t.string "story"
-    t.string "dates"
+    t.string "date"
     t.string "link"
+    t.string "button_label"
   end
 
   create_table "nominations", force: :cascade do |t|

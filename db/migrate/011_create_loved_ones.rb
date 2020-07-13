@@ -4,8 +4,9 @@ class CreateLovedOnes < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :img_url
       t.string :story
-      t.string :dates
+      t.string :date
       t.string :link
+      t.string :button_label
     end
   end
 end
