@@ -7,6 +7,7 @@ Tag.destroy_all
 TagJoiner.destroy_all
 Category.destroy_all
 CategoryJoiner.destroy_all
+LovedOne.destroy_all
 
 isabel = User.create(username: "isabel", email_address: "isabel@gmail.com", password: "abc123", created_at: "2020-06-30 17:13:12")
 frankie = User.create(username: "frankie", email_address: "frankie@gmail.com", password: "abc123", created_at: "2020-05-17 17:13:12")
@@ -16,6 +17,9 @@ bvc = Organization.create(
   name: "Black Visions Collective",
   location: "Twin Cities region, Minnesota",
   website: "https://www.blackvisionsmn.org",
+  twitter: "https://twitter.com/BlackVisionsMN",
+  facebook: "https://www.facebook.com/LitBLVC/?ref=page_internal",
+  instagram: "https://www.instagram.com/blackvisionscollective/",
   donation_link: "https://secure.everyaction.com/4omQDAR0oUiUagTu0EG-Ig2",
   tagline: "We aim to center our work in healing and transformative justice principles, intentionally develop our organizations core “DNA” to ensure sustainability, and develop Minnesota’s emerging Black leadership to lead powerful campaigns.",
   description: "BLVC is committed to a long term vision in which ALL Black lives not only matter, but are able to thrive. What we know to be true in order to create this world is that oppressed people, especially Black people, need to build collective power in order to create systems transformation. Through the development of powerful strategic campaigns, we seek to expand the power of Black people across the Twin Cities metro area and Minnesota. This can look like delivering mobilization and action goals as part of a national coalition in which Black lives are centered, but it most often looks like visioning and leading targeted collaborative local campaigns that advance a concrete impact for people’s lives here, while also advancing a shift in public narrative that connects to transformative long-term change."
@@ -25,6 +29,9 @@ healing_justice = Organization.create(
   name: "Minnesota Healing Justice Network",
   location: "Minneapolis, Minnesota",
   website: "https://www.minnesotahealingjusticenetwork.com",
+  twitter: "https://twitter.com/MnHealing",
+  facebook: "https://www.facebook.com/mnhealingjustice",
+  instagram: "https://www.instagram.com/mnhealingjustice/",
   donation_link: "https://www.paypal.me/mnhealingjustice",
   tagline: "The Minnesota Healing Justice Network is a collaborative network of over 100 community healers, bodyworkers & birthworkers, therapists & herbalists, artists & educators, nurses & more centering the wellness of Black and Brown families through mutual aid, health equity and solidarity.",
   description: "We provide a supportive professional community and mutual aid network for wellness and healing justice practitioners who also identify as IBPOC (indigenous, black, or people of color). In order to reduce racial health disparities, we recognize the call for community care and collectivist cultural practices, for ourselves, our patients and students, and all Minnesotans."
@@ -159,6 +166,59 @@ cuapb = Organization.create(
   description: "CUAPB is an all-volunteer organization that was formed in December 2000 in the aftermath of the shooting death of Charles 'Abuka' Sanders by Minneapolis police. As we worked to try to achieve justice for Abuka's family, we came to the realization that while many people respond in powerful ways to brutal police killings and other egregious incidents, handling each case separately is not an effective way to deal with police brutality. Reinventing the wheel with each new case is reactive, not proactive, and almost assures there will be more cases. It was time to form an organization to take on police brutality 24/7/365 and to work on day-to-day abuses with the idea that taking them on could reduce the number of more serious incidents. In mid-December 2000, CUAPB held its first meeting on a Saturday at Hosmer Library in Minneapolis."
   )
 
+cjcj = Organization.create(
+  name: "Center on Juvenile and Criminal Justice",
+  location: "San Francisco, California",
+  website: "http://www.cjcj.org/index.html",
+  twitter: "https://twitter.com/cjcjmedia",
+  facebook: "https://www.facebook.com/CJCJmedia",
+  donation_link: "https://www.networkforgood.org/donation/ExpressDonation.aspx?ORGID2=943136811",
+  tagline: "The Center on Juvenile and Criminal Justice (CJCJ) is a nonprofit nonpartisan organization whose mission is to reduce society’s reliance on incarceration as a solution to social problems.",
+  description: "The Center on Juvenile and Criminal Justice (CJCJ) is a nonprofit nonpartisan organization whose mission is to reduce society’s reliance on incarceration as a solution to social problems.
+
+  In pursuit of this mission, CJCJ provides direct services, technical assistance, and policy analysis that work in unison to promote a balanced and humane criminal justice system designed to reduce incarceration and enhance long-term public safety."
+  )
+
+lspc = Organization.create(
+  name: "Legal Services for Prisoners with Children",
+  location: "Oakland, California",
+  website: "https://prisonerswithchildren.org",
+  twitter: "https://twitter.com/LSPC_",
+  instagram: "https://www.instagram.com/allofusornone/",
+  facebook: "https://www.facebook.com/LegalServicesPrisonersChildren/",
+  donation_link: "https://prisonerswithchildren.ourpowerbase.net/civicrm/contribute/transact?reset=1&id=1",
+  tagline: "LSPC organizes communities impacted by the criminal justice system and advocates to release incarcerated people, to restore human and civil rights, and to reunify families and communities.",
+  description: "Legal Services for Prisoners with Children (LSPC) is one of the first organizations in the country that was formed to support people in prison, specifically women, at a time when their struggles were nearly invisible. Over the last 40 years we have grown from a small law office to a national organization with a unique approach that engages in law, policy, communications, and community organizing to advance our work. We have expanded our focus from women in prison to include all incarcerated and formerly incarcerated people and their families. We have seeded and served as an incubator to trailblazing organizations like Critical Resistance, Justice Now, California Coalition for Women Prisoners, Prison Activist Resource Center and more. We have litigated dozens of cases resulting in trendsetting legal standards including expanding alternatives to incarceration, ending long term solitary confinement in California, and the protection of pregnant incarcerated women. Not only has our legal work protected the human rights and health of millions of currently and formerly incarcerated people, we’ve trained hundreds of attorneys and legal workers along the way."
+  )
+
+cfyj = Organization.create(
+  name: "Campaign for Youth Justice",
+  location: "Washington, DC",
+  website: "http://www.campaignforyouthjustice.org/about-us/mission-and-goals",
+  twitter: "https://twitter.com/justiceforyouth",
+  instagram: "https://www.instagram.com/justiceforyouth/",
+  facebook: "https://www.facebook.com/CampaignforYouthJustice",
+  donation_link: "https://cfyj.nationbuilder.com/donate",
+  tagline: "The Campaign for Youth Justice (CFYJ) is a national initiative focused entirely on ending the practice of prosecuting, sentencing, and incarcerating youth under the age of 18 in the adult criminal justice system.",
+  description: "The Campaign for Youth Justice (CFYJ) is a national initiative focused entirely on ending the practice of prosecuting, sentencing, and incarcerating youth under the age of 18 in the adult criminal justice system. CFYJ was initiated in 2004 by a parent whose son was transferred to the adult criminal court for prosecution. Stemming from her family's circumstances and a desire to change state and federal policies that allow for the prosecution of hundreds of thousands of youth in adult court every year, this parent made a financial commitment to launch a national campaign. Subsequently, the Campaign for Youth Justice officially opened in July, 2005.
+
+  The strategic goals of CFYJ are to reduce the total number of youth prosecuted in the adult criminal justice system and to decrease the harmful impact of trying youth in adult court. The campaign utilizes both federal and state-level strategies for youth justice reform. We strongly believe that any movement must involve those who are most impacted by the laws and policies. Thus, we seek to empower those affected by encouraging them to use their voices and experiences to affect meaningful change."
+  )
+
+lac = Organization.create(
+  name: "Legal Action Center",
+  location: "New York, NY",
+  website: "https://www.lac.org",
+  twitter: "https://twitter.com/lac_news",
+  instagram: "https://www.instagram.com/legalactioncenter/",
+  facebook: "https://www.facebook.com/legalactioncenter",
+  donation_link: "https://www.lac.org/donate",
+  tagline: "The Legal Action Center (LAC) uses legal and policy strategies to fight discrimination, build health equity, and restore opportunity for people with criminal records, substance use disorders, and HIV or AIDS.",
+  description: "LAC seeks to end punitive responses to health conditions like addiction, mental illness, and HIV or AIDS, and to create equitable access to affordable, quality treatment. We envision a society that upholds the civil rights of all individuals, regardless of their history of justice involvement or medical condition. And we aim to dismantle the historic and persistent impact of systemic racism that has fueled mass incarceration and disparate community health systems.
+  
+  Since our founding in 1973, LAC has utilized a multi-pronged approach to achieving our mission, which includes: direct legal services, impact litigation, policy advocacy, education and training, and coalition-building."
+  )
+
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
@@ -178,6 +238,19 @@ tag_food = Tag.create(content: "food")
 tag_community = Tag.create(content: "community")
 tag_mental_health = Tag.create(content: "mental-health")
 tag_police_brutality = Tag.create(content: "police-brutality")
+
+TagJoiner.create(tag_id: tag_youth.id, org_id: cjcj.id)
+TagJoiner.create(tag_id: tag_legal.id, org_id: cjcj.id)
+TagJoiner.create(tag_id: tag_prison.id, org_id: cjcj.id)
+
+TagJoiner.create(tag_id: tag_legal.id, org_id: lac.id)
+
+TagJoiner.create(tag_id: tag_youth.id, org_id: cfyj.id)
+TagJoiner.create(tag_id: tag_legal.id, org_id: cfyj.id)
+TagJoiner.create(tag_id: tag_prison.id, org_id: cfyj.id)
+
+TagJoiner.create(tag_id: tag_legal.id, org_id: lspc.id)
+TagJoiner.create(tag_id: tag_prison.id, org_id: lspc.id)
 
 TagJoiner.create(tag_id: tag_bail_fund.id, org_id: bail_project.id)
 
@@ -362,6 +435,34 @@ medicine_racism = Resource.create(
   img_url: "https://d279m997dpfwgl.cloudfront.net/wp/2020/06/0605_mgh-kneel-in04-1000x667.jpg",
   description: "Racism is part of my daily experience, even as a medical student rotating through the teaching hospitals of Harvard Medical School. The health care system is one sector within the larger framework of white supremacy embedded in American society. While the medical community accepts how the social determinants of health contribute to disparities, we hesitate to address how structural and interpersonal racism shorten Black people’s lives. Medicine has yet to actively become anti-racist.")
 
+prison_abolition_atlanta = Resource.create(
+  title: "What Prison Abolition Actually Looks Like",
+  author: "Barry Lam",
+  link: "https://slate.com/news-and-politics/2020/07/prison-abolition-atlanta-jail-marilynn-winn.html",
+  img_url: "https://compote.slate.com/images/26db8ee2-cc2a-4230-9262-54dd0f0665aa.jpeg?width=780&height=520&rect=1560x1040&offset=0x0",
+  description: "For Marilynn Winn, prison abolition is the mission to make other people’s lives take a different path than hers did. Winn spent 40 years in and out of the criminal justice system, trapped in a vicious cycle where she’d shoplift because she couldn’t get a job with her criminal record—which would land her back in prison, again and again. Now 69 years old, Winn is the co-founder and executive director of Women on the Rise, an organization in Georgia led by formerly incarcerated women of color. She’s working to close the Atlanta City Detention Center, or ACDC, a jail with a perverse history.")
+
+case_for_prison_abolition = Resource.create(
+  title: "The Case for Abolition",
+  author: "Ruth Wilson Gilmore and James Kilgore",
+  link: "https://www.themarshallproject.org/2019/06/19/the-case-for-abolition",
+  description: "Our belief in abolition is first and foremost philosophical. It grew from watching, experiencing, and opposing decades of reliance on concrete and steel cages as catch-all solutions to social problems. We want a society that centers freedom and justice instead of profit and punishment.")
+
+legal_toolkit = Resource.create(
+  title: "After the Trial: A Legal Toolkit for Prisoners and Their Loved Ones",
+  author: "By Ellen Mayer, Manny Ramos, and Bashirah Mack",
+  link: "https://www.citybureau.org/afterthetrial",
+  img_url: "https://images.squarespace-cdn.com/content/v1/56cfdde2c2ea51668ffa109d/1531262197259-QKBI0MXNZFQLO4K2R04H/ke17ZwdGBToddI8pDm48kCqXGJ9nBqUxiIUV_S8esPEUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcujVMWVXwxOOAPS2bElRUjMs0VJgjO9VR4ASqefNWZVpDaWsKZPM8FndHiw_qjgNS/Screen+Shot+2018-07-10+at+5.36.22+PM.png?format=1500w",
+  description: "This 32-page zine, produced during City Bureau’s Spring 2018 Fellowship, contains easy-to-read information to help incarcerated people navigate the complicated legal landscape.
+
+  * Note: Information is specific to the laws and courts of Illinois only. City Bureau is not a legal organization and we will not be able to answer your questions or provide any kind of legal advice. Information for organizations that may be able to provide assistance is on page 11 of the zine.")
+
+jail_media = Resource.create(
+  title: "County  Jail : A  survival  guide  for  inmates,   friends  and  families ",
+  author: "Jail Media",
+  link: "https://jailmedia.com/County-Jail-Survival-Guide.pdf",
+  description: "This guide to life in jail gives you the information you need to survive behind bars. It allows inmates, friends and families to understand what jail is really like and debunks some of the popular myths perpetuated by the media. The survival guide discusses specific tactics that will help you avoid violence and trouble in jail. Jail does not have to be a terrible experience - you just have to know what to expect and how to deal with various situations and people.")
+
 book = Category.create(content: "book")
 guide = Category.create(content: "guide")
 data = Category.create(content: "data")
@@ -374,6 +475,8 @@ protest = Category.create(content: "protest")
 culture = Category.create(content: "culture")
 game = Category.create(content: "game")
 community = Category.create(content: "community")
+legal = Category.create(content: "legal")
+incarceration = Category.create(content: "incarceration")
 
 CategoryJoiner.create(resource_id: ijeoma_oluo.id, category_id: book.id)
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: book.id)
@@ -381,6 +484,8 @@ CategoryJoiner.create(resource_id: alex_vitale.id, category_id: book.id)
 CategoryJoiner.create(resource_id: nk_jemisin.id, category_id: book.id)
 
 CategoryJoiner.create(resource_id: protest_safely.id, category_id: guide.id)
+CategoryJoiner.create(resource_id: legal_toolkit.id, category_id: guide.id)
+CategoryJoiner.create(resource_id: jail_media.id, category_id: guide.id)
 
 CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: data.id)
 
@@ -395,6 +500,8 @@ CategoryJoiner.create(resource_id: public_opinion.id, category_id: article.id)
 CategoryJoiner.create(resource_id: black_slang.id, category_id: article.id)
 CategoryJoiner.create(resource_id: black_panther.id, category_id: article.id)
 CategoryJoiner.create(resource_id: medicine_racism.id, category_id: article.id)
+CategoryJoiner.create(resource_id: prison_abolition_atlanta.id, category_id: article.id)
+CategoryJoiner.create(resource_id: case_for_prison_abolition.id, category_id: article.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: academic.id)
 CategoryJoiner.create(resource_id: alex_vitale.id, category_id: academic.id)
@@ -408,6 +515,8 @@ CategoryJoiner.create(resource_id: viral_death.id, category_id: police_brutality
 CategoryJoiner.create(resource_id: gabby.id, category_id: queer.id)
 
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: prison_abolition.id)
+CategoryJoiner.create(resource_id: prison_abolition_atlanta.id, category_id: prison_abolition.id)
+CategoryJoiner.create(resource_id: case_for_prison_abolition.id, category_id: prison_abolition.id)
 
 CategoryJoiner.create(resource_id: protest_safely.id, category_id: protest.id)
 CategoryJoiner.create(resource_id: public_opinion.id, category_id: protest.id)
@@ -422,3 +531,18 @@ CategoryJoiner.create(resource_id: black_slang.id, category_id: culture.id)
 CategoryJoiner.create(resource_id: hair_nah.id, category_id: game.id)
 
 CategoryJoiner.create(resource_id: black_owned_bk.id, category_id: community.id)
+
+CategoryJoiner.create(resource_id: legal_toolkit.id, category_id: legal.id)
+
+CategoryJoiner.create(resource_id: legal_toolkit.id, category_id: incarceration.id)
+CategoryJoiner.create(resource_id: jail_media.id, category_id: incarceration.id)
+
+LovedOne.create(
+  name: "Breonna Taylor",
+  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. “She was an essential worker. She had to go to work,” her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic. “She didn’t have a problem with that.” Breonna survived the frontlines of a pandemic that disproportionately kills Black people, only to have her life stolen by police.
+  
+  On the night of March 13th, the Louisville Metro Police executed a warrant, looking for drugs they never found, reportedly trafficked by a person who did not live with Breonna or in her complex-and whom they already had in custody. They sprayed her home with 20 rounds, shooting Breonna 8 times, killing her in her bed.",
+  img_url: "https://nypost.com/wp-content/uploads/sites/2/2020/07/breonna-taylor-61.jpg?quality=80&strip=all",
+  link: "https://justiceforbreonna.org",
+  dates: "March 13, 2020",
+  )

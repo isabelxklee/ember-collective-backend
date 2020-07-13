@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :resources
   resources :categories
   resources :category_joiners
+  resources :loved_ones
 
 end
