@@ -547,3 +547,39 @@ LovedOne.create(
   )
 
   #   On the night of March 13th, the Louisville Metro Police executed a warrant, looking for drugs they never found, reportedly trafficked by a person who did not live with Breonna or in her complex-and whom they already had in custody. They sprayed her home with 20 rounds, shooting Breonna 8 times, killing her in her bed."
+
+LovedOne.create(
+  name: "George Floyd",
+  story: "George Floyd was known to his close friends as “Big Floyd“. Big Floyd was known throughout his community as a peacemaker, a minister, and someone to take advice from. He was a father and brother. He loved his family and wanted to provide a better future for them. George Floyd moved to Minneapolis to get better working opportunities for himself and for his family. He started driving trucks in Minnesota and went on to also work at a restaurant in Minneapolis as a security guard. He was known in his new job as a hardworking and friendly employee. Everywhere he went he was the same caring and kind spirit.",
+  img_url: "https://images.squarespace-cdn.com/content/v1/5ecdf72c3e4654347029db39/1590562587907-P0WGGWP2CXQ9J2MX6UF7/ke17ZwdGBToddI8pDm48kLr_EJifESJmTEqfe2hQu9d7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTm1v6GcKqh6mrhfxzW2tqo7xztBSmKqcda5HF2PkFBOhp4fnOM-K3O0Ab-nSoK1txs/Image%2Bfrom%2BiOS%2B%25287%2529.jpg?format=750w",
+  link: "https://www.justiceforbigfloyd.com",
+  date: "May 25, 2020",
+  button_label: "Justice for Big Floyd"
+  )
+
+LovedOne.create(
+  name: "Elijah McClain",
+  story: "",
+  img_url: "https://pyxis.nymag.com/v1/imgs/3b2/9bd/ace6fc56c9e767e0b357e5398dbbaf0fc5-elijah-mclain-family-photo.rvertical.w1200.jpg",
+  link: "",
+  date: "August 24, 2019",
+  button_label: ""
+  )
+
+LovedOne.create(
+  name: "Javier Ambler",
+  story: "Javier Ambler II was a 40-year-old black man, a postal worker, and the father of two sons. His mother described him as a gentle giant and a great father. Ambler's father, who was in the army, said that Javier 'didn't know white from black or Latino from Filipino... Everything was green, Army green.' Ambler lived in Pflugerville and had earlier played football at Ellison High School, Blinn College, and also attended Texas Prairie View A&M University.",
+  img_url: "https://cdn.cnn.com/cnnnext/dam/assets/200610132956-photo-javier-ambler-super-tease.jpg",
+  link: "https://www.justiceforjavierambler.com",
+  date: "March 28, 2019",
+  button_label: "Justice for Javier"
+  )
+
+LovedOne.create(
+  name: "Manuel Ellis",
+  story: "Manuel Ellis was a 33 year old musician at his church, and had two children: an 11-year-old son and an 18-month old daughter. Ellis was black. Ellis' family have said Ellis struggled with addiction and mental health. According to a lawyer for the family, Ellis was walking home after playing drums that evening at his church. He reportedly called his mother, brother and sister separately after leaving the Church. Ellis' mother said she spoke with him about a half an hour before his arrest and death.",
+  img_url: "https://upload.wikimedia.org/wikipedia/en/6/6b/Manuel_Ellis.jpeg",
+  link: "",
+  date: "March 3, 2020",
+  button_label: ""
+  )
