@@ -166,18 +166,18 @@ cuapb = Organization.create(
   description: "CUAPB is an all-volunteer organization that was formed in December 2000 in the aftermath of the shooting death of Charles 'Abuka' Sanders by Minneapolis police. As we worked to try to achieve justice for Abuka's family, we came to the realization that while many people respond in powerful ways to brutal police killings and other egregious incidents, handling each case separately is not an effective way to deal with police brutality. Reinventing the wheel with each new case is reactive, not proactive, and almost assures there will be more cases. It was time to form an organization to take on police brutality 24/7/365 and to work on day-to-day abuses with the idea that taking them on could reduce the number of more serious incidents. In mid-December 2000, CUAPB held its first meeting on a Saturday at Hosmer Library in Minneapolis."
   )
 
-cjcj = Organization.create(
-  name: "Center on Juvenile and Criminal Justice",
-  location: "San Francisco, California",
-  website: "http://www.cjcj.org/index.html",
-  twitter: "https://twitter.com/cjcjmedia",
-  facebook: "https://www.facebook.com/CJCJmedia",
-  donation_link: "https://www.networkforgood.org/donation/ExpressDonation.aspx?ORGID2=943136811",
-  tagline: "The Center on Juvenile and Criminal Justice (CJCJ) is a nonprofit nonpartisan organization whose mission is to reduce society’s reliance on incarceration as a solution to social problems.",
-  description: "The Center on Juvenile and Criminal Justice (CJCJ) is a nonprofit nonpartisan organization whose mission is to reduce society’s reliance on incarceration as a solution to social problems.
+# cjcj = Organization.create(
+#   name: "Center on Juvenile and Criminal Justice",
+#   location: "San Francisco, California",
+#   website: "http://www.cjcj.org/index.html",
+#   twitter: "https://twitter.com/cjcjmedia",
+#   facebook: "https://www.facebook.com/CJCJmedia",
+#   donation_link: "https://www.networkforgood.org/donation/ExpressDonation.aspx?ORGID2=943136811",
+#   tagline: "The Center on Juvenile and Criminal Justice (CJCJ) is a nonprofit nonpartisan organization whose mission is to reduce society’s reliance on incarceration as a solution to social problems.",
+#   description: "The Center on Juvenile and Criminal Justice (CJCJ) is a nonprofit nonpartisan organization whose mission is to reduce society’s reliance on incarceration as a solution to social problems.
 
-  In pursuit of this mission, CJCJ provides direct services, technical assistance, and policy analysis that work in unison to promote a balanced and humane criminal justice system designed to reduce incarceration and enhance long-term public safety."
-  )
+#   In pursuit of this mission, CJCJ provides direct services, technical assistance, and policy analysis that work in unison to promote a balanced and humane criminal justice system designed to reduce incarceration and enhance long-term public safety."
+#   )
 
 lspc = Organization.create(
   name: "Legal Services for Prisoners with Children",
@@ -219,6 +219,17 @@ lac = Organization.create(
   Since our founding in 1973, LAC has utilized a multi-pronged approach to achieving our mission, which includes: direct legal services, impact litigation, policy advocacy, education and training, and coalition-building."
   )
 
+pbp = Organization.create(
+  name: "Prison Book Program",
+  location: "Quincy, Massachusetts",
+  website: "https://prisonbookprogram.org",
+  twitter: "https://twitter.com/prisonbookprog",
+  facebook: "https://www.facebook.com/PrisonBookProgram/",
+  donation_link: "https://prisonbookprogram.org/donate-money/",
+  tagline: "Prison Book Program is a grassroots organization that exists for one purpose—to send free books to prisoners. We’ve been doing it since 1972.",
+  description: "Prison Book Program mails books to people in prison to support their educational, vocational and personal development and to help them avoid returning to prison after their release. We also aim to provide a quality volunteer experience that introduces citizens to issues surrounding the American prison system and the role of education in reforming it."
+  )
+
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
@@ -238,19 +249,24 @@ tag_food = Tag.create(content: "food")
 tag_community = Tag.create(content: "community")
 tag_mental_health = Tag.create(content: "mental-health")
 tag_police_brutality = Tag.create(content: "police-brutality")
+tag_incarceration = Tag.create(content: "incarceration")
 
-TagJoiner.create(tag_id: tag_youth.id, org_id: cjcj.id)
-TagJoiner.create(tag_id: tag_legal.id, org_id: cjcj.id)
-TagJoiner.create(tag_id: tag_prison.id, org_id: cjcj.id)
+TagJoiner.create(tag_id: tag_incarceration.id, org_id: pbp.id)
+TagJoiner.create(tag_id: tag_community.id, org_id: pbp.id)
+
+# TagJoiner.create(tag_id: tag_youth.id, org_id: cjcj.id)
+# TagJoiner.create(tag_id: tag_legal.id, org_id: cjcj.id)
+# TagJoiner.create(tag_id: tag_prison.id, org_id: cjcj.id)
 
 TagJoiner.create(tag_id: tag_legal.id, org_id: lac.id)
+TagJoiner.create(tag_id: tag_incarceration.id, org_id: lac.id)
 
 TagJoiner.create(tag_id: tag_youth.id, org_id: cfyj.id)
 TagJoiner.create(tag_id: tag_legal.id, org_id: cfyj.id)
-TagJoiner.create(tag_id: tag_prison.id, org_id: cfyj.id)
+TagJoiner.create(tag_id: tag_incarceration.id, org_id: cfyj.id)
 
 TagJoiner.create(tag_id: tag_legal.id, org_id: lspc.id)
-TagJoiner.create(tag_id: tag_prison.id, org_id: lspc.id)
+TagJoiner.create(tag_id: tag_incarceration.id, org_id: lspc.id)
 
 TagJoiner.create(tag_id: tag_bail_fund.id, org_id: bail_project.id)
 
@@ -463,6 +479,83 @@ jail_media = Resource.create(
   link: "https://jailmedia.com/County-Jail-Survival-Guide.pdf",
   description: "This guide to life in jail gives you the information you need to survive behind bars. It allows inmates, friends and families to understand what jail is really like and debunks some of the popular myths perpetuated by the media. The survival guide discusses specific tactics that will help you avoid violence and trouble in jail. Jail does not have to be a terrible experience - you just have to know what to expect and how to deal with various situations and people.")
 
+twelve_things = Resource.create(
+  title: "12 Things to do Instead of Calling the Cops ",
+  author: "May Day Collective and Washtenaw Solidarity & Defense",
+  link: "https://www.sproutdistro.com/catalog/zines/organizing/12-things-instead-calling-cops",
+  description: "This short zine offers 12 suggestions that people can do instead of calling the cops. They focus a lot on simple things that can be done to avoid having to call the first place such as compiling alternative resource lists for mental health and encouraging people to approach those in they are having issues with rather than getting the state involved in a conflict. Underlying the entire zine is the premise that strong communities can make it possible to handle conflicts without involving the police.")
+
+abolitionist_toolkit = Resource.create(
+  title: "The Abolitionist Toolkit",
+  author: "Critical Resistance",
+  link: "http://criticalresistance.org/resources/the-abolitionist-toolkit/",
+  img_url: "http://criticalresistance.org/wp-content/uploads/2012/06/CR-Abolition-COVER.jpg",
+  description: "THIS TOOLKIT EMERGED OUT OF DISCUSSIONS THAT BEGAN IN BOSTON IN MARCH 2002. Members of Critical Resistance (CR) and partner organizations gathered for a roundtable discussion on abolitionist organizing strategies. One of the things that we agreed we needed to strengthen our work was a set of ideas, exercises, and resources to share with the people we organize with that would explain the idea of abolishing the prison industrial complex (PIC) and would help us take concrete steps toward that goal.")
+
+abolition_workshop = Resource.create(
+  title: "Abolition of Policing Workshop",
+  author: "Critical Resistance",
+  link: "http://criticalresistance.org/abolition-of-policing-workshop/",
+  img_url: "http://criticalresistance.org/wp-content/uploads/2017/07/DISMANTLE-fight-policing.png",
+  description: "As part of our work to fight policing, we are making our Abolition of Policing Workshop publicly available! The goal of the workshop is to give participants an understanding and historical overview of policing in the US, and to provide abolitionist ways to resist and not rely on the cops in a range of situations.")
+
+police_alternative = Resource.create(
+  title: "Alternatives to Calling the Police",
+  author: "Showing Up for Racial Justice",
+  link: "https://drive.google.com/file/d/1j2qGd6QyiOa_Li6cdsrNJ0HuVBUCSi1E/view",
+  img_url: "https://www.lamag.com/wp-content/uploads/sites/6/2020/06/Los-Angeles-CA-Steps-to-Ask-Yourself.jpg",
+  description: "As part of our work to fight policing, we are making our Abolition of Policing Workshop publicly available! The goal of the workshop is to give participants an understanding and historical overview of policing in the US, and to provide abolitionist ways to resist and not rely on the cops in a range of situations."
+  )
+
+became_police_abolitionist = Resource.create(
+  title: "How I Became a Police Abolitionist",
+  author: "Derecka Purnell",
+  link: "https://www.theatlantic.com/ideas/archive/2020/07/how-i-became-police-abolitionist/613540/",
+  img_url: "https://cdn.theatlantic.com/thumbor/j6PfjYxJ_tD2Neb0PLsFg5gpAuM=/1344x1430/media/img/posts/2020/06/0620_Becca_Katie_AbolishPolice/original.jpg",
+  description: "When people dismiss abolitionists for not caring about victims or safety, they tend to forget that we are those victims, those survivors of violence."
+  )
+
+police_reforms_fail = Resource.create(
+  title: "'It's not about bad apples': how US police reforms have failed to stop brutality and violence",
+  author: "Sam Levin",
+  link: "https://www.theguardian.com/us-news/2020/jun/16/its-not-about-bad-apples-how-us-police-reforms-have-failed-to-stop-brutality-and-violence",
+  img_url: "https://i.guim.co.uk/img/media/d02b9b07e479b4394782f4ff46ee7187e1670fb3/0_119_5472_3283/master/5472.jpg?width=1300&quality=45&auto=format&fit=max&dpr=2&s=bfa40a114902532d330b6a4d24eeb578",
+  description: "Body cameras, bias training and other popular initiatives have not addressed systemic problems. Abolitionists say defunding is the only way forward."
+  )
+
+minneapolis_police_defund = Resource.create(
+  title: "Minneapolis lawmakers vow to disband police department in historic move",
+  author: "Sam Levin",
+  link: "https://www.theguardian.com/us-news/2020/jun/07/minneapolis-city-council-defund-police-george-floyd",
+  img_url: "https://i.guim.co.uk/img/media/aa880d569bc85b4671fb14e288ad5aa98d7a5624/0_0_3600_1877/master/3600.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=2f4a313e3273af80f01f4bf93ee111c4",
+  description: "City council members declare intent to ‘abolish’ embattled agency and replace with alternative model in wake of George Floyd’s killing."
+  )
+
+police_history = Resource.create(
+  title: "How the U.S. Got Its Police Force",
+  author: "Olivia B. Waxman",
+  link: "https://time.com/4779112/police-history-origins/",
+  img_url: "https://api.time.com/wp-content/uploads/2017/05/police.jpeg?w=800&quality=85",
+  description: "It would be easy to think that the police officer is a figure who has existed since the beginning of civilization. That’s the idea on display in the proclamation from President John F. Kennedy on the dedication of the week of May 15 as “National Police Week,” in which he noted that law-enforcement officers had been protecting Americans since the nation’s birth."
+  )
+
+police_history_2 = Resource.create(
+  title: "The History of Policing in the United States",
+  author: "Dr. Gary Potter",
+  link: "https://plsonline.eku.edu/sites/plsonline.eku.edu/files/the-history-of-policing-in-us.pdf",
+  img_url: "",
+  description: "More than crime, modern police forces in the United States emerged as a response to “disorder.” What constitutes social and public order depends largely on who is defining those terms, and in the cities of 19th century America
+  they were defined by the mercantile interests, who through taxes and political influence supported the development of bureaucratic policing institutions."
+  )
+
+# name = Resource.create(
+#   title: "",
+#   author: "",
+#   link: "",
+#   img_url: "",
+#   description: ""
+#   )
+
 book = Category.create(content: "book")
 guide = Category.create(content: "guide")
 data = Category.create(content: "data")
@@ -477,6 +570,14 @@ game = Category.create(content: "game")
 community = Category.create(content: "community")
 legal = Category.create(content: "legal")
 incarceration = Category.create(content: "incarceration")
+anti_police = Category.create(content: "anti-police")
+history = Category.create(content: "history")
+
+CategoryJoiner.create(resource_id: police_history.id, category_id: history.id)
+CategoryJoiner.create(resource_id: police_history_2.id, category_id: history.id)
+
+CategoryJoiner.create(resource_id: twelve_things.id, category_id: anti_police.id)
+CategoryJoiner.create(resource_id: police_alternative.id, category_id: anti_police.id)
 
 CategoryJoiner.create(resource_id: ijeoma_oluo.id, category_id: book.id)
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: book.id)
@@ -486,6 +587,10 @@ CategoryJoiner.create(resource_id: nk_jemisin.id, category_id: book.id)
 CategoryJoiner.create(resource_id: protest_safely.id, category_id: guide.id)
 CategoryJoiner.create(resource_id: legal_toolkit.id, category_id: guide.id)
 CategoryJoiner.create(resource_id: jail_media.id, category_id: guide.id)
+CategoryJoiner.create(resource_id: twelve_things.id, category_id: guide.id)
+CategoryJoiner.create(resource_id: abolitionist_toolkit.id, category_id: guide.id)
+CategoryJoiner.create(resource_id: abolition_workshop.id, category_id: guide.id)
+CategoryJoiner.create(resource_id: police_alternative.id, category_id: guide.id)
 
 CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: data.id)
 
@@ -502,21 +607,31 @@ CategoryJoiner.create(resource_id: black_panther.id, category_id: article.id)
 CategoryJoiner.create(resource_id: medicine_racism.id, category_id: article.id)
 CategoryJoiner.create(resource_id: prison_abolition_atlanta.id, category_id: article.id)
 CategoryJoiner.create(resource_id: case_for_prison_abolition.id, category_id: article.id)
+CategoryJoiner.create(resource_id: became_police_abolitionist.id, category_id: article.id)
+CategoryJoiner.create(resource_id: police_reforms_fail.id, category_id: article.id)
+CategoryJoiner.create(resource_id: minneapolis_police_defund.id, category_id: article.id)
+CategoryJoiner.create(resource_id: police_history.id, category_id: article.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: academic.id)
 CategoryJoiner.create(resource_id: alex_vitale.id, category_id: academic.id)
 CategoryJoiner.create(resource_id: dimensions.id, category_id: academic.id)
+CategoryJoiner.create(resource_id: police_history_2.id, category_id: academic.id)
 
 CategoryJoiner.create(resource_id: michelle_jacobs.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: mapping_police_violence.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: alex_vitale.id, category_id: police_brutality.id)
 CategoryJoiner.create(resource_id: viral_death.id, category_id: police_brutality.id)
+CategoryJoiner.create(resource_id: abolition_workshop.id, category_id: police_brutality.id)
+CategoryJoiner.create(resource_id: became_police_abolitionist.id, category_id: police_brutality.id)
+CategoryJoiner.create(resource_id: police_reforms_fail.id, category_id: police_brutality.id)
+CategoryJoiner.create(resource_id: minneapolis_police_defund.id, category_id: police_brutality.id)
 
 CategoryJoiner.create(resource_id: gabby.id, category_id: queer.id)
 
 CategoryJoiner.create(resource_id: angela_davis.id, category_id: prison_abolition.id)
 CategoryJoiner.create(resource_id: prison_abolition_atlanta.id, category_id: prison_abolition.id)
 CategoryJoiner.create(resource_id: case_for_prison_abolition.id, category_id: prison_abolition.id)
+CategoryJoiner.create(resource_id: abolitionist_toolkit.id, category_id: prison_abolition.id)
 
 CategoryJoiner.create(resource_id: protest_safely.id, category_id: protest.id)
 CategoryJoiner.create(resource_id: public_opinion.id, category_id: protest.id)
@@ -539,18 +654,16 @@ CategoryJoiner.create(resource_id: jail_media.id, category_id: incarceration.id)
 
 LovedOne.create(
   name: "Breonna Taylor",
-  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. “She was an essential worker. She had to go to work,” her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic. “She didn’t have a problem with that.” Breonna survived the frontlines of a pandemic that disproportionately kills Black people, only to have her life stolen by police.",
+  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. “She was an essential worker. She had to go to work,” her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic.",
   img_url: "https://nypost.com/wp-content/uploads/sites/2/2020/07/breonna-taylor-61.jpg?quality=80&strip=all",
   link: "https://justiceforbreonna.org",
   date: "March 13, 2020",
   button_label: "Justice for Breonna"
   )
 
-  #   On the night of March 13th, the Louisville Metro Police executed a warrant, looking for drugs they never found, reportedly trafficked by a person who did not live with Breonna or in her complex-and whom they already had in custody. They sprayed her home with 20 rounds, shooting Breonna 8 times, killing her in her bed."
-
 LovedOne.create(
   name: "George Floyd",
-  story: "George Floyd was known to his close friends as “Big Floyd“. Big Floyd was known throughout his community as a peacemaker, a minister, and someone to take advice from. He was a father and brother. He loved his family and wanted to provide a better future for them. George Floyd moved to Minneapolis to get better working opportunities for himself and for his family. He started driving trucks in Minnesota and went on to also work at a restaurant in Minneapolis as a security guard. He was known in his new job as a hardworking and friendly employee. Everywhere he went he was the same caring and kind spirit.",
+  story: "George Floyd was known to his close friends as “Big Floyd“. Big Floyd was known throughout his community as a peacemaker, a minister, and someone to take advice from. He was a father and brother. He loved his family and wanted to provide a better future for them.",
   img_url: "https://images.squarespace-cdn.com/content/v1/5ecdf72c3e4654347029db39/1590562587907-P0WGGWP2CXQ9J2MX6UF7/ke17ZwdGBToddI8pDm48kLr_EJifESJmTEqfe2hQu9d7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTm1v6GcKqh6mrhfxzW2tqo7xztBSmKqcda5HF2PkFBOhp4fnOM-K3O0Ab-nSoK1txs/Image%2Bfrom%2BiOS%2B%25287%2529.jpg?format=750w",
   link: "https://www.justiceforbigfloyd.com",
   date: "May 25, 2020",
@@ -559,7 +672,7 @@ LovedOne.create(
 
 LovedOne.create(
   name: "Elijah McClain",
-  story: "",
+  story: "Elijah McClain was a massage therapist, a keen musician and a runner. He was also known for the kind way he treated colleagues, regularly singing and dancing, and for regular trips to a local pet shop where he would play a violin for kittens who did not have homes. He was a vegetarian and known as a peaceful person.",
   img_url: "https://pyxis.nymag.com/v1/imgs/3b2/9bd/ace6fc56c9e767e0b357e5398dbbaf0fc5-elijah-mclain-family-photo.rvertical.w1200.jpg",
   link: "",
   date: "August 24, 2019",
@@ -568,7 +681,7 @@ LovedOne.create(
 
 LovedOne.create(
   name: "Javier Ambler",
-  story: "Javier Ambler II was a 40-year-old black man, a postal worker, and the father of two sons. His mother described him as a gentle giant and a great father. Ambler's father, who was in the army, said that Javier 'didn't know white from black or Latino from Filipino... Everything was green, Army green.' Ambler lived in Pflugerville and had earlier played football at Ellison High School, Blinn College, and also attended Texas Prairie View A&M University.",
+  story: "Javier Ambler II was a 40-year-old black man, a postal worker, and the father of two sons. His mother described him as a gentle giant and a great father.",
   img_url: "https://cdn.cnn.com/cnnnext/dam/assets/200610132956-photo-javier-ambler-super-tease.jpg",
   link: "https://www.justiceforjavierambler.com",
   date: "March 28, 2019",
@@ -577,7 +690,7 @@ LovedOne.create(
 
 LovedOne.create(
   name: "Manuel Ellis",
-  story: "Manuel Ellis was a 33 year old musician at his church, and had two children: an 11-year-old son and an 18-month old daughter. Ellis was black. Ellis' family have said Ellis struggled with addiction and mental health. According to a lawyer for the family, Ellis was walking home after playing drums that evening at his church. He reportedly called his mother, brother and sister separately after leaving the Church. Ellis' mother said she spoke with him about a half an hour before his arrest and death.",
+  story: "Manuel Ellis was a 33 year old musician at his church, and had two children: an 11-year-old son and an 18-month old daughter.",
   img_url: "https://upload.wikimedia.org/wikipedia/en/6/6b/Manuel_Ellis.jpeg",
   link: "",
   date: "March 3, 2020",
