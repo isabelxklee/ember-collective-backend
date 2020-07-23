@@ -233,10 +233,21 @@ pbp = Organization.create(
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
 Nomination.create(user_id: frankie.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: isabel.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: giraffe.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: giraffe.id, org_id: Organization.all.sample.id)
+Nomination.create(user_id: giraffe.id, org_id: Organization.all.sample.id)
 
-DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 500)
+DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 25)
 DonationChallenge.create(sender_id: isabel.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 50)
 DonationChallenge.create(sender_id: frankie.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 100)
+DonationChallenge.create(sender_id: frankie.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 25)
+DonationChallenge.create(sender_id: giraffe.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 100)
+DonationChallenge.create(sender_id: giraffe.id, receiver_id: isabel.id, org_id: Organization.all.sample.id, amount: 25)
+DonationChallenge.create(sender_id: giraffe.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 100)
+DonationChallenge.create(sender_id: giraffe.id, receiver_id: frankie.id, org_id: Organization.all.sample.id, amount: 25)
 
 tag_queer = Tag.create(content: "queer")
 tag_trans = Tag.create(content: "trans")
@@ -654,7 +665,7 @@ CategoryJoiner.create(resource_id: jail_media.id, category_id: incarceration.id)
 
 LovedOne.create(
   name: "Breonna Taylor",
-  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. “She was an essential worker. She had to go to work,” her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic.",
+  story: "Breonna Taylor was an award-winning EMT and first responder in Lousiville, KY, who loved helping her patients and her community. \"She was an essential worker. She had to go to work,\" her mother, Tamika Palmer said of her dedication to standing on the frontlines of this pandemic.",
   img_url: "https://nypost.com/wp-content/uploads/sites/2/2020/07/breonna-taylor-61.jpg?quality=80&strip=all",
   link: "https://justiceforbreonna.org",
   date: "March 13, 2020",
@@ -696,3 +707,31 @@ LovedOne.create(
   date: "March 3, 2020",
   button_label: ""
   )
+
+LovedOne.create(
+  name: "Tamir Rice",
+  story: "Tamir Elijah Rice was athletic, enjoying basketball, football, and ping-pong. Gifted in both football and basketball, Rice was known for his tight football spiral and regularly joined pick up games with high schoolers, winning the respect of his peers. He was involved in arts programs in his community, sculpting pottery and crocheting embroidery for his mother. He was loving and caring but he was a jokester.",
+  img_url: "https://media1.s-nbcnews.com/i/newscms/2015_03/853446/140117-tamir-rice-1847_75878790a4527a9d3f3d341b45f2ca9d.jpg",
+  link: "https://www.tamirericefoundation.org",
+  date: "November 22, 2014",
+  button_label: "Tamir Rice Foundation"
+  )
+
+
+LovedOne.create(
+  name: "Trayvon Martin",
+  story: "Trayvon wanted to fly or fix planes and loved sports video games. \"Tray was a beautiful child. He was raised to have manners and be respectful. He was a teenager who still had a lot of kid in him,\" his father, Tracy Martin said. \"He still loved to go to Chuck E. Cheese with his cousins and would bake them chocolate chip cookies when he was babysitting them.\"",
+  img_url: "https://www.nydailynews.com/resizer/97b5miUDnyC0Uf9OzCCLsWlnuPY=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/NL2NJ55OL4MU3VHEJVOVZSMCRM.jpg",
+  link: "https://www.trayvonmartinfoundation.org",
+  date: "February 26, 2012",
+  button_label: "Trayvon Martin Foundation"
+  )
+
+# LovedOne.create(
+#   name: "",
+#   story: "",
+#   img_url: "",
+#   link: "",
+#   date: "",
+#   button_label: ""
+#   )

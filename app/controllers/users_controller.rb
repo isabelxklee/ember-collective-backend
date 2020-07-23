@@ -22,7 +22,7 @@ class UsersController < ApplicationController
       wristband = encode_token(user_id: @user.id)
       render json: { user: UserSerializer.new(@user), token: wristband }, status: :created
     else
-      render json: {message: "Username or email address is already taken. Please try again."}
+      render json: {message: "There was an error. Please try again."}
     end
   end
 
