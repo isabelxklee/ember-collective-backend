@@ -727,6 +727,20 @@ LovedOne.create(
   button_label: "Trayvon Martin Foundation"
   )
 
+LovedOne.create(
+  name: "Ahmaud Arbery",
+  story: "Ahmaud was a loving son, brother, uncle, nephew, cousin, and friend. He always made sure he never departed without an “I Love You”. He had a smile that would light up a room. He loved sports; he was quite the athlete and chose to wear the football jersey #21, which was passed down from his older brother, Marcus, Jr.",
+  img_url: "https://images.app.goo.gl/Q1i3mB6qthdSYSRHA",
+  link: "https://www.gofundme.com/f/i-run-with-maud",
+  date: "February 23, 2020",
+  button_label: "GoFundMe"
+  )
+
+  
+
+
+
+
 # LovedOne.create(
 #   name: "",
 #   story: "",
