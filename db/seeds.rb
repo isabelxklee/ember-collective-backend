@@ -730,13 +730,57 @@ LovedOne.create(
 LovedOne.create(
   name: "Ahmaud Arbery",
   story: "Ahmaud was a loving son, brother, uncle, nephew, cousin, and friend. He always made sure he never departed without an “I Love You”. He had a smile that would light up a room. He loved sports; he was quite the athlete and chose to wear the football jersey #21, which was passed down from his older brother, Marcus, Jr.",
-  img_url: "https://images.app.goo.gl/Q1i3mB6qthdSYSRHA",
+  img_url: "https://static01.nyt.com/images/2020/05/05/us/05georgia-shooting/merlin_171704253_666f7809-cb90-4b1e-8130-28c9d27d1825-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
   link: "https://www.gofundme.com/f/i-run-with-maud",
   date: "February 23, 2020",
   button_label: "GoFundMe"
   )
 
-  
+LovedOne.create(
+  name: "Freddie Gray",
+  story: "Freddie Gray's life was marked by encounters with a system designed to fail him. He and his sisters grew up in a home filled with lead paint, which the landlord failed to remove, resulting in irreversable brain damage. He then spent his young adult life dealing with an overburdened criminal justice system set on making him a statistic.",
+  img_url: "https://d3jj1xescvzl2o.cloudfront.net/01-09-2018/t_1515503448718_name_bal_doj_won_t_bring_charges_against_baltimore_officers_in_freddie_gray_case_20170912",
+  link: "",
+  date: "April 19, 2015",
+  button_label: ""
+  )
+
+LovedOne.create(
+  name: "Michael Brown",
+  story: "Michael was an avid lover of music, computers, and sports—especially football. He loved to rap about life, and used his talents to write songs for his friends. Michael enjoyed playing the PS4 and X-Box games. He was a very friendly, gentle giant who loved his family very much. ",
+  img_url: "https://media4.s-nbcnews.com/i/newscms/2014_34/624456/140818-michael-brown-graduation-jms-2128_e4936cf3c0e7b2b7989761361a6f546d.jpg",
+  link: "http://www.michaelbrownfoundation.org",
+  date: "August 9, 2014",
+  button_label: "The Michael Brown Foundation"
+  )
+
+LovedOne.create(
+  name: "Oluwatoyin Salau",
+  story: "Toyin was a leader with the Black Lives Matter Movement. \"She stood for justice. She stood for what is right\" according to her family's pastor and friend, Zacch Olorunnipa. Her loved ones remember her as a \"loving and caring human being who loved her family and was fearless in speaking up about injustices against people of color.\"",
+  img_url: "https://assets.change.org/photos/7/fq/qh/fsfQqHmaqAYHFFH-800x450-noPad.jpg?1592211222",
+  link: "https://www.change.org/p/tallahassee-police-to-bring-her-justice",
+  date: "June 13, 2020",
+  button_label: "Justice for Toyin Salau Petition"
+  )
+
+LovedOne.create(
+  name: "Brayla Stone",
+  story: "Brayla was a 17-year-old YouTuber and comedian from Little Rock, AK who one day aspired to become famous and perform at the BET awards. She loved the colors red and purple.",
+  img_url: "https://scontent-lga3-2.xx.fbcdn.net/v/t1.0-9/96358761_169041727978520_7073089088085032960_n.jpg?_nc_cat=107&_nc_sid=8bfeb9&_nc_ohc=hTHVh_qfefMAX_rhHNs&_nc_ht=scontent-lga3-2.xx&oh=c9a06d70640b022e39fa0ce9c60b3e55&oe=5F4661B2",
+  link: "https://www.intransitive.org/brayla-stone-microgrants",
+  date: "June 25, 2020",
+  button_label: "Brayla Stone Microgrants"
+  )
+
+LovedOne.create(
+  name: "Merci Mack",
+  story: "Merci loved getting her hair done, baking cookies, and relaxing in the jacuzzi. Her best friend Dolly said, \“I’ll remember the bossy attitude, the loudness, the confidence, the biggest prettiest smile ever, the LOVE she had for me.\”",
+  img_url: "https://assets2.hrc.org/files/images/blog/Merci_Mack_1600x900.png",
+  link: "https://charity.gofundme.com/o/en/campaign/merci-mack-memorial-fund",
+  date: "June 30, 2020",
+  button_label: "Merci Mack Memorial Fund"
+  )
+
 
 
 
