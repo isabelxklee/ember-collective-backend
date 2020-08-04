@@ -3,7 +3,7 @@ Ember Collective Backend 🔥
 
 This is the Ruby on Rails API for the Ember Collective. Ember Collective is an educational resource for anti-racism and supporting the Black Lives Matter movement. You can browse non-profit organizations to support, interact with the Police Brutality Tracker, and send donation match challenges to other users.
 
-Live demo: https://plant-flashcards.netlify.app
+Live demo: https://embercollective.org
 
 [Link to frontend](https://github.com/isabelxklee/ember-collective)
 
