@@ -47,4 +47,4 @@ To get started, you will need Ruby on Rails and Postgres.
     ```$ rails s```
 
 ## Live demo
-https://plant-flashcards.netlify.app
+https://embercollective.org
