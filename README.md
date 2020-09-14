@@ -1,12 +1,16 @@
-## Ruby on Rails API
-* Ruby on Rails API for the Ember Collective backend.
+Ember Collective Backend 🔥
+========================
+
+This is the Ruby on Rails API for the Ember Collective. Ember Collective is an educational resource for anti-racism and supporting the Black Lives Matter movement. You can browse non-profit organizations to support, interact with the Police Brutality Tracker, and send donation match challenges to other users.
+
+Live demo: https://embercollective.org
+
+[Link to frontend](https://github.com/isabelxklee/ember-collective)
+
+[Project tracker](https://github.com/isabelxklee/ember-collective/projects/1)
 
 ## Getting Started
 To get started, you will need Ruby on Rails and Postgres.
-
-### Node installation on OS X
-
-In your terminal...
 
 1. Install [Homebrew](https://brew.sh/)
 
@@ -25,7 +29,7 @@ In your terminal...
     ```$ brew install postgresql```
 
 
-## Installation
+## Downloading this project
 
 1. Clone the repo and cd into the folder
 2. Bundle Install
@@ -41,3 +45,6 @@ In your terminal...
 4. Last step, launch the rails server!
 
     ```$ rails s```
+
+## Live demo
+https://embercollective.org
