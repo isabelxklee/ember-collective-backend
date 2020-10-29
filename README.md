@@ -14,19 +14,23 @@ To get started, you will need Ruby on Rails and Postgres.
 
 1. Install [Homebrew](https://brew.sh/)
 
-    ```$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"```
+    ```
+    $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   
 2. Install [Ruby](https://www.ruby-lang.org/en/)
     
-    ```$ brew install ruby```
+    ```
+    $ brew install ruby
 
 3. Install [Rails](https://rubyonrails.org/)
 
-    ```$ gem install rails```
+    ```
+    $ gem install rails
 
 4. Install [PostgreSQL](https://www.postgresql.org/)
 
-    ```$ brew install postgresql```
+    ```
+    $ brew install postgresql
 
 
 ## Downloading this project
@@ -34,7 +38,8 @@ To get started, you will need Ruby on Rails and Postgres.
 1. Clone the repo and cd into the folder
 2. Bundle Install
 
-    ```$ bundle install```
+    ```
+    $ bundle install
     
 3. Create migrations, migrate and seed:
 
@@ -42,9 +47,11 @@ To get started, you will need Ruby on Rails and Postgres.
     $ rails db:create
     $ rails db:migrate
     $ rails db:seed
+    
 4. Last step, launch the rails server!
 
-    ```$ rails s```
+    ```
+    $ rails s
 
 ## Live demo
 https://embercollective.org
