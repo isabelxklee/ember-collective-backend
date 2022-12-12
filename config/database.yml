@@ -80,6 +80,3 @@ test:
 #
 production:
   <<: *default
-  database: ember_collective_production
-  username: ember_collective
-  password: <%= ENV['BLH_BACKEND_DATABASE_PASSWORD'] %>
